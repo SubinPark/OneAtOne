@@ -7,12 +7,45 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var playerView: YTPlayerView!
+    @IBOutlet weak var viewCountLabel: UILabel!
+    @IBOutlet weak var viewCountLoadingIndicator: UIActivityIndicatorView!
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+        // Kick off a spinner while we fetch view count
+        viewCountLabel.isHidden = true
+        viewCountLoadingIndicator.startAnimating()
+        
+        YoutubeUtils.getViewCount(for: YoutubeUtils.videoID) { (error : Error?, viewCount : Int?) in
+            DispatchQueue.main.async {
+                self.viewCountLoadingIndicator.stopAnimating()
+                self.viewCountLoadingIndicator.isHidden = true
+                
+                if let error = error {
+                    print("Error getting view count: \(error)")
+                }
+                
+                if let viewCount = viewCount {
+                    
+                    // Format the view count
+                    let numberFormatter = NumberFormatter()
+                    numberFormatter.numberStyle = NumberFormatter.Style.decimal
+                    
+                    if let formattedViewCount = numberFormatter.string(from: NSNumber(value: viewCount)) {
+                        self.viewCountLabel.text = "\(formattedViewCount) views"
+                        self.viewCountLabel.isHidden = false
+                    }
+                }
+            }
+        }
+        
+        self.playerView.load(withVideoId: YoutubeUtils.videoID)
 	}
 
 	override func didReceiveMemoryWarning() {
