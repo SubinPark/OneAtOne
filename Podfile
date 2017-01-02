@@ -11,6 +11,8 @@ target 'OneAtOne' do
   pod "youtube-ios-player-helper", "~> 0.1.4"
   pod 'Firebase'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
 
   target 'OneAtOneTests' do
     inherit! :search_paths
