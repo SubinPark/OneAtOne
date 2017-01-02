@@ -10,6 +10,7 @@
 		09A2DF079C552FCD9FF1D013 /* Pods_OneAtOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49F5E684A400DB86FBD2485 /* Pods_OneAtOneTests.framework */; };
 		12B2FBC3AE406721C840E4B0 /* Pods_OneAtOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2410013137D5250511512AD3 /* Pods_OneAtOne.framework */; };
 		BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D03391E10798600EB99BF /* YoutubeUtils.swift */; };
+		BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */; };
 		E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92451E0BBFE600E5A063 /* AppDelegate.swift */; };
 		E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92471E0BBFE600E5A063 /* ViewController.swift */; };
 		E77B924B1E0BBFE600E5A063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77B92491E0BBFE600E5A063 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		282FB7A01B807DBC51D33A2D /* Pods-OneAtOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOne/Pods-OneAtOne.debug.xcconfig"; sourceTree = "<group>"; };
 		AC6FEADAAA8CEEEFBF63967D /* Pods-OneAtOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA2D03391E10798600EB99BF /* YoutubeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeUtils.swift; sourceTree = "<group>"; };
+		BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedViewController.swift; sourceTree = "<group>"; };
 		C49F5E684A400DB86FBD2485 /* Pods_OneAtOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B92421E0BBFE600E5A063 /* OneAtOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneAtOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B92451E0BBFE600E5A063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E77B92451E0BBFE600E5A063 /* AppDelegate.swift */,
+				BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */,
 				E77B92471E0BBFE600E5A063 /* ViewController.swift */,
 				BA2D03391E10798600EB99BF /* YoutubeUtils.swift */,
 				E77B92491E0BBFE600E5A063 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 				E77B92401E0BBFE600E5A063 /* Resources */,
 				EB4CE70CA4E8EC6698F32ECD /* [CP] Embed Pods Frameworks */,
 				23EDFDD8FAAA040182920F38 /* [CP] Copy Pods Resources */,
+				BA8536AE1E1795B800E9FC52 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,6 +300,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA8536AE1E1795B800E9FC52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3053cedc4bf4e3d9a7deec788fe784cfa0024e61 6411159a9755adc874d444a96f4c4f1b95e8119333be6b7b4a3469a704c66dd9";
+		};
 		C1D196E6E7A268950AA9FE84 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */,
 				E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */,
 				BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */,
 				E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */,
