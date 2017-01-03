@@ -10,7 +10,7 @@ import Foundation
 
 class YoutubeUtils : NSObject {
     /// Hard coded for now. TODO: find a way to populate this dynamically as we get new videos
-    static let videoID : String =  "BsXiclMdHsU"
+    static let videoID : String =  RCValues.sharedInstance.videoUrl(forKey: .liveVideoUrl)
     
     /// Youtube v3 API key, registered to kate.n.finlay@gmail.com
     fileprivate static let apiKey = "AIzaSyBp-pLhGyL2IWAe9o1MTKvP50nt-itRlYs"

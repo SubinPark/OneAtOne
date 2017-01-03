@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Twitter.self])
 		FIRApp.configure()
+		let _ = RCValues.sharedInstance
 		
 		let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
 		let notificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
