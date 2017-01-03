@@ -30,16 +30,14 @@ class RCValues {
 	}
 	
 	func fetchCloudValues() {
-		// 1
-		// WARNING: Don't actually do this in production!
-		let fetchDuration: TimeInterval = 10 // Change to 43200 (12hr) for production
+		// WARNING: Have to change the duration for production, for example, 43200 (12hr)
+		let fetchDuration: TimeInterval = 10
 		activateDebugMode()
 		FIRRemoteConfig.remoteConfig().fetch(withExpirationDuration: fetchDuration) { (status, error) in
 			guard error == nil else {
 				print ("Uh-oh. Got an error fetching remote values \(error)")
 				return
 			}
-			// 2
 			FIRRemoteConfig.remoteConfig().activateFetched()
 			print("Retrieved values from the cloud!")
 		}
