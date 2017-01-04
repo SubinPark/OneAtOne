@@ -12,6 +12,7 @@
 		BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D03391E10798600EB99BF /* YoutubeUtils.swift */; };
 		BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */; };
 		E71A9BF01E1A344400D5BED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */; };
+		E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7541A611E1B12B9008E20C7 /* RCValues.swift */; };
 		BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */; };
 		E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92451E0BBFE600E5A063 /* AppDelegate.swift */; };
 		E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92471E0BBFE600E5A063 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		CDEA76EADE0C3727A42CBB29 /* Pods-OneAtOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.release.xcconfig"; sourceTree = "<group>"; };
 		E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneAtOne.entitlements; sourceTree = "<group>"; };
 		E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7541A611E1B12B9008E20C7 /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C49F5E684A400DB86FBD2485 /* Pods_OneAtOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B92421E0BBFE600E5A063 /* OneAtOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneAtOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				E77B924C1E0BBFE600E5A063 /* Assets.xcassets */,
 				E77B924E1E0BBFE600E5A063 /* LaunchScreen.storyboard */,
 				E77B92511E0BBFE600E5A063 /* Info.plist */,
+				E7541A611E1B12B9008E20C7 /* RCValues.swift */,
 			);
 			path = OneAtOne;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			files = (
 				BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */,
 				BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */,
+				E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */,
 				E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */,
 				BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */,
 				E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */,
@@ -546,7 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0E8772EA5E68E10878D7518 /* Pods-OneAtOneTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneAtOneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -561,7 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CDEA76EADE0C3727A42CBB29 /* Pods-OneAtOneTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneAtOneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
