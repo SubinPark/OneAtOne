@@ -783,14 +783,14 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWr-2I-rhK" userLabel="Highlighted Tab View">
-                                <rect key="frame" x="270" y="613" width="125" height="5"/>
+                                <rect key="frame" x="250" y="613" width="125" height="5"/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.28235294119999998" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="jvx-m3-x0C"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hly-fI-AGB" userLabel="Not Highlighted Tab View">
-                                <rect key="frame" x="-20" y="613" width="290" height="5"/>
+                                <rect key="frame" x="-20" y="613" width="270" height="5"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="pgI-Qz-Lma"/>
@@ -811,7 +811,7 @@
                             <constraint firstItem="xl4-nE-4w2" firstAttribute="top" secondItem="0bJ-Hz-RxS" secondAttribute="bottom" id="jT2-9R-rev"/>
                             <constraint firstItem="KWr-2I-rhK" firstAttribute="width" secondItem="szp-bT-HXq" secondAttribute="width" multiplier="1/3" id="qxs-AS-Q6Z"/>
                             <constraint firstItem="0bJ-Hz-RxS" firstAttribute="top" secondItem="rBt-Xx-4mP" secondAttribute="bottom" id="r9M-xL-ns1"/>
-                            <constraint firstAttribute="trailing" secondItem="KWr-2I-rhK" secondAttribute="trailing" constant="-20" id="zSl-yI-F8I"/>
+                            <constraint firstAttribute="trailing" secondItem="KWr-2I-rhK" secondAttribute="trailing" id="zSl-yI-F8I"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="FOLLOW" id="8S9-l5-s5M">
