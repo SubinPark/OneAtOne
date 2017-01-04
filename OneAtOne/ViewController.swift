@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var viewCountLabel: UILabel!
     @IBOutlet weak var viewCountLoadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var titleLabel: UILabel!
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -41,6 +42,17 @@ class ViewController: UIViewController {
                         self.viewCountLabel.text = "\(formattedViewCount) views"
                         self.viewCountLabel.isHidden = false
                     }
+                }
+            }
+        }
+        
+        YoutubeUtils.getTitle(for: YoutubeUtils.videoID) { (error : Error?, title : String?) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error getting title: \(error)")
+                }
+                if let title = title {
+                    self.titleLabel.text = title
                 }
             }
         }

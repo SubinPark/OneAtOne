@@ -53,4 +53,41 @@ class YoutubeUtils : NSObject {
         task.resume()
     }
     
+    /**
+     * Asynchronously gets the title for a given youtube video ID.
+     *
+     * param videoID the video ID you want to get view count for
+     * param callback gives any errors from the process, also the title as a String
+     */
+    static func getTitle(for videoID: String, callback: @escaping (_ error : Error?, _ title : String?) -> Void) {
+        let youtubeApi = "https://www.googleapis.com/youtube/v3/videos?part=contentDetails%2C+snippet%2C+statistics&id=\(videoID)&key=\(YoutubeUtils.apiKey)"
+        let url = NSURL(string: youtubeApi)
+        
+        let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
+            do {
+                var title : String? = nil
+                if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] {
+                    
+                    print("Response from YouTube: \(jsonResult)")
+                    
+                    // Extract the View Count from the JSON
+                    if let items = jsonResult["items"] as? [AnyObject]?,
+                        let snippet = items?[0]["snippet"] as? [String: AnyObject]?,
+                        let retval = snippet?["title"] as? String {
+                        title = retval
+                    }
+                }
+                callback(error, title)
+            }
+            catch {
+                print("json error: \(error)")
+                callback(error, nil)
+            }
+            
+        })
+        
+        // Start the request
+        task.resume()
+    }
+    
 }
