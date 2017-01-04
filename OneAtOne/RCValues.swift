@@ -7,6 +7,7 @@
 //
 import Foundation
 import Firebase
+import FirebaseRemoteConfig
 
 enum ValueKey: String {
 	case liveVideoUrl
