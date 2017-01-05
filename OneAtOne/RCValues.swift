@@ -10,13 +10,13 @@ import Firebase
 import FirebaseRemoteConfig
 
 enum ValueKey: String {
-	case liveVideoUrl
+	case LiveVideoUrl
 }
 
 class RCValues {
  
 	static let sharedInstance = RCValues()
-	static let defaultVideoUrl = "ly_GlXOTA-A"
+	var defaultVideoUrl = "ly_GlXOTA-A"
  
 	private init() {
 		loadDefaultValues()
@@ -25,7 +25,7 @@ class RCValues {
  
 	func loadDefaultValues() {
 		let appDefaults: [String: NSObject] = [
-			ValueKey.liveVideoUrl.rawValue : RCValues.defaultVideoUrl as NSObject
+			ValueKey.LiveVideoUrl.rawValue : defaultVideoUrl as NSObject
 		]
 		FIRRemoteConfig.remoteConfig().setDefaults(appDefaults)
 	}
@@ -34,13 +34,17 @@ class RCValues {
 		// WARNING: Have to change the duration for production, for example, 43200 (12hr)
 		let fetchDuration: TimeInterval = 10
 		activateDebugMode()
-		FIRRemoteConfig.remoteConfig().fetch(withExpirationDuration: fetchDuration) { (status, error) in
+		FIRRemoteConfig.remoteConfig().fetch(withExpirationDuration: fetchDuration) { [unowned self] (status, error) in
 			guard error == nil else {
 				print ("Uh-oh. Got an error fetching remote values \(error)")
 				return
 			}
+			
+			//Fetching successful
 			FIRRemoteConfig.remoteConfig().activateFetched()
-			print("Retrieved values from the cloud!")
+			if let newValue = FIRRemoteConfig.remoteConfig().configValue(forKey: ValueKey.LiveVideoUrl.rawValue).stringValue {
+				self.defaultVideoUrl = newValue
+			}
 		}
 	}
 	
@@ -49,7 +53,8 @@ class RCValues {
 		FIRRemoteConfig.remoteConfig().configSettings = debugSettings!
 	}
 	
-	func videoUrl(forKey key: ValueKey) -> String {
-		return FIRRemoteConfig.remoteConfig().configValue(forKey: key.rawValue).stringValue ?? RCValues.defaultVideoUrl
+	func videoUrl() -> String {
+		fetchCloudValues()
+		return defaultVideoUrl
 	}
 }

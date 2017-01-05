@@ -10,8 +10,12 @@ import Foundation
 
 class YoutubeUtils : NSObject {
     /// Gets dynamic value from Firebase
-    static let videoID : String =  RCValues.sharedInstance.videoUrl(forKey: .liveVideoUrl)
-    
+	static var videoID: String {
+		get{
+			return RCValues.sharedInstance.videoUrl()
+		}
+	}
+	
     /// Youtube v3 API key, registered to kate.n.finlay@gmail.com
     fileprivate static let apiKey = "AIzaSyBp-pLhGyL2IWAe9o1MTKvP50nt-itRlYs"
     

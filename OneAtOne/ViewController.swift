@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
+    
         YoutubeUtils.getTitle(for: YoutubeUtils.videoID) { (error : Error?, title : String?) in
             DispatchQueue.main.async {
                 if let error = error {
@@ -56,10 +56,12 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        self.playerView.load(withVideoId: YoutubeUtils.videoID)
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		self.playerView.load(withVideoId: YoutubeUtils.videoID)
+	}
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
