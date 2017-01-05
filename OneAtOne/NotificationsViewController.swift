@@ -14,6 +14,8 @@ protocol NotificationsViewControllerDelegate {
 
 class NotificationsViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var confirmButton: UIButton!
     
     var delegate : NotificationsViewControllerDelegate?
@@ -39,6 +41,9 @@ class NotificationsViewController: UIViewController {
         
         // Round corners
         confirmButton.layer.cornerRadius = confirmButton.frame.height/2.0
-       confirmButton.leadTitle(withFontAwesomeIconNamed: "fa-thumbs-up")
+        confirmButton.leadTitle(withFontAwesomeIconNamed: "fa-thumbs-up")
+        
+        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: 150.0)
+        
     }
 }

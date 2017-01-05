@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,8 +29,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobilize" translatesAutoresizingMaskIntoConstraints="NO" id="yZF-Iu-6Zn">
                                         <rect key="frame" x="46" y="95" width="250" height="142"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="142" id="BAC-MJ-Qe8"/>
-                                            <constraint firstAttribute="width" constant="250" id="dFo-B0-451"/>
+                                            <constraint firstAttribute="width" secondItem="yZF-Iu-6Zn" secondAttribute="height" multiplier="125:71" id="WBv-ke-0Cg"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -46,19 +46,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-Mm-kGT">
-                                <rect key="frame" x="30" y="321" width="315" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="999" constant="126" id="7me-ea-bzH"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="OeB-9S-gGR"/>
-                                </constraints>
-                                <string key="text">1. Countdown reminders up to the 1@1 action on Jan. 21.
-
-2. The 1@1 Action Plan after Jan. 21. Each week for a year, you’ll receive a 1-minute video of an easy action to take that, when multiplied by thousands of people, can create real change.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
-                                <color key="textColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sN-XE-4db">
@@ -98,6 +85,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEB-ZX-7ZQ">
+                                <rect key="frame" x="30" y="321" width="315" height="126"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-tz-UKc">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="126"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-Mm-kGT">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="7yc-3p-YeN"/>
+                                                </constraints>
+                                                <string key="text">1. Countdown reminders up to the 1@1 action on Jan. 21.
+
+2. The 1@1 Action Plan after Jan. 21. Each week for a year, you’ll receive a 1-minute video of an easy action to take that, when multiplied by thousands of people, can create real change.</string>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                <color key="textColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="width" secondItem="wzg-tz-UKc" secondAttribute="width" id="1Q0-Dt-eO4"/>
+                                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="top" secondItem="wzg-tz-UKc" secondAttribute="top" id="Eai-Vr-IlL"/>
+                                            <constraint firstAttribute="trailing" secondItem="jrE-Mm-kGT" secondAttribute="trailing" id="NVL-mn-0sM"/>
+                                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="leading" secondItem="wzg-tz-UKc" secondAttribute="leading" id="hTq-bi-9cx"/>
+                                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="centerX" secondItem="wzg-tz-UKc" secondAttribute="centerX" id="vIK-wz-9qR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wzg-tz-UKc" secondAttribute="trailing" id="0F0-Kc-oR5"/>
+                                    <constraint firstAttribute="bottom" secondItem="wzg-tz-UKc" secondAttribute="bottom" id="2KU-46-K1d"/>
+                                    <constraint firstAttribute="height" constant="126" id="C4G-er-2Ke"/>
+                                    <constraint firstItem="wzg-tz-UKc" firstAttribute="top" secondItem="hEB-ZX-7ZQ" secondAttribute="top" id="Dme-sT-32F"/>
+                                    <constraint firstItem="wzg-tz-UKc" firstAttribute="centerX" secondItem="hEB-ZX-7ZQ" secondAttribute="centerX" id="EG0-1y-fYo"/>
+                                    <constraint firstItem="wzg-tz-UKc" firstAttribute="centerY" secondItem="hEB-ZX-7ZQ" secondAttribute="centerY" id="U0t-Gb-mXy"/>
+                                    <constraint firstItem="wzg-tz-UKc" firstAttribute="leading" secondItem="hEB-ZX-7ZQ" secondAttribute="leading" id="aQT-eX-nWd"/>
+                                    <constraint firstItem="wzg-tz-UKc" firstAttribute="width" secondItem="hEB-ZX-7ZQ" secondAttribute="width" id="cbl-dR-ghP"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -107,22 +134,25 @@
                             <constraint firstItem="5sN-XE-4db" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="Drr-7S-tUL"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="width" secondItem="sqJ-Qi-o0g" secondAttribute="width" multiplier="0.84" id="E1I-77-WP7"/>
                             <constraint firstItem="LiA-ly-X4Q" firstAttribute="top" secondItem="sqJ-Qi-o0g" secondAttribute="topMargin" id="JCh-nu-jta"/>
+                            <constraint firstItem="yZF-Iu-6Zn" firstAttribute="width" secondItem="sqJ-Qi-o0g" secondAttribute="width" multiplier="2/3" id="MOT-JL-xMv"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="EJC-IX-0Vo" secondAttribute="bottom" constant="118" id="Moy-FX-DrX"/>
                             <constraint firstItem="JMQ-Pb-SBJ" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="Ocm-B9-IFp"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="SlV-H9-lRd"/>
+                            <constraint firstItem="hEB-ZX-7ZQ" firstAttribute="width" secondItem="wWL-ta-jfR" secondAttribute="width" id="WIT-oO-MBg"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="bgN-QJ-k5R"/>
+                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" relation="lessThanOrEqual" secondItem="yZF-Iu-6Zn" secondAttribute="bottom" constant="30" id="bpe-tf-4IK"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="5sN-XE-4db" secondAttribute="bottom" constant="54" id="dg5-he-TEp"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="top" secondItem="wWL-ta-jfR" secondAttribute="bottom" constant="20" id="fHs-Ox-V5R"/>
+                            <constraint firstItem="hEB-ZX-7ZQ" firstAttribute="top" secondItem="wWL-ta-jfR" secondAttribute="bottom" constant="20" id="eRk-hy-Swe"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="JMQ-Pb-SBJ" secondAttribute="bottom" constant="17" id="h5u-BM-tzo"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="width" secondItem="wWL-ta-jfR" secondAttribute="width" id="hLg-Jn-l20"/>
                             <constraint firstItem="LiA-ly-X4Q" firstAttribute="leading" secondItem="sqJ-Qi-o0g" secondAttribute="leadingMargin" id="lcl-Ax-vlK"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="q31-29-u8v"/>
                             <constraint firstItem="EJC-IX-0Vo" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="rbE-87-bWD"/>
-                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" secondItem="LiA-ly-X4Q" secondAttribute="bottom" id="z6R-X8-fjz"/>
+                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" secondItem="LiA-ly-X4Q" secondAttribute="bottom" priority="999" id="z6R-X8-fjz"/>
+                            <constraint firstItem="hEB-ZX-7ZQ" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="zZJ-kJ-GRi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="5sN-XE-4db" id="b2u-O9-u8P"/>
+                        <outlet property="scrollView" destination="hEB-ZX-7ZQ" id="LMb-CZ-cDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68x-Tu-aSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,7 +173,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg2-I5-n2d" userLabel="Blend to nav bar view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <color key="backgroundColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.035294117647058823" green="0.039215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Xlb-ck-mNL"/>
                                 </constraints>
@@ -153,7 +183,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="j6Z-Pl-O5d"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.035294117647058823" green="0.039215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -305,7 +335,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="GD3-GO-92S"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.035294117647058823" green="0.039215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -413,7 +443,7 @@ Rise for 1 minute of silence</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-aD-caD" userLabel="Schedule view">
-                                                <rect key="frame" x="0.0" y="193" width="383" height="623"/>
+                                                <rect key="frame" x="0.0" y="193" width="383" height="435"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-KI-32Y">
                                                         <rect key="frame" x="19" y="20" width="345.5" height="25"/>
@@ -490,7 +520,7 @@ Rise for 1 minute of silence</string>
                                                         <color key="textColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All who believe in equality will stand as able, alone or with others, or will simply be silent for one unifying minute." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-xS-TVH">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All who believe in equality will stand as able, alone or with others, or will simply be silent for one unifying minute." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-xS-TVH">
                                                         <rect key="frame" x="19" y="361" width="345.5" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="qay-oQ-qc9"/>
@@ -500,7 +530,7 @@ Rise for 1 minute of silence</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback or questions? Email info@1at1.org." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za7-1X-03a">
-                                                        <rect key="frame" x="41.5" y="630.5" width="300" height="14.5"/>
+                                                        <rect key="frame" x="41.5" y="442.5" width="300" height="14.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="KHQ-kZ-ThF"/>
                                                         </constraints>
@@ -525,7 +555,7 @@ Rise for 1 minute of silence</string>
                                                     <constraint firstAttribute="bottom" secondItem="za7-1X-03a" secondAttribute="bottom" constant="-22" id="WBE-29-e0d"/>
                                                     <constraint firstItem="Mhi-KI-32Y" firstAttribute="width" secondItem="I7S-4o-M1A" secondAttribute="width" id="blX-ne-R7o"/>
                                                     <constraint firstItem="Thr-So-woF" firstAttribute="top" secondItem="Mhi-KI-32Y" secondAttribute="bottom" constant="10" id="csz-Bd-gv8"/>
-                                                    <constraint firstAttribute="height" constant="623" id="dRr-mc-6QP"/>
+                                                    <constraint firstAttribute="height" constant="435" id="dRr-mc-6QP"/>
                                                     <constraint firstItem="I7S-4o-M1A" firstAttribute="top" secondItem="QNU-Kg-KsS" secondAttribute="bottom" id="dny-20-gkK"/>
                                                     <constraint firstItem="hPd-GI-hwe" firstAttribute="top" secondItem="I7S-4o-M1A" secondAttribute="bottom" constant="22" id="gXb-Xz-H3H"/>
                                                     <constraint firstItem="za7-1X-03a" firstAttribute="centerX" secondItem="jxI-aD-caD" secondAttribute="centerX" id="huH-0C-Fgw"/>
@@ -630,7 +660,7 @@ Rise for 1 minute of silence</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="B5d-jz-vbg"/>
                                     <constraint firstAttribute="height" constant="64" id="ebg-oC-9ZA"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.1176470588" green="0.28235294119999998" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.035294117647058823" green="0.039215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -786,7 +816,7 @@ Rise for 1 minute of silence</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Boe-Rg-bw1"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.1176470588" green="0.28235294119999998" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.035294117649999998" green="0.039215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

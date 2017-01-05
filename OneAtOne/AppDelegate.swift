@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              NSForegroundColorAttributeName: UIColor.black],
             for: .selected)
 
+        UIApplication.shared.statusBarStyle = .lightContent
+        
 		return true
 	}
 	
