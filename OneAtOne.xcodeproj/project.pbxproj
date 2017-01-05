@@ -11,6 +11,9 @@
 		52977AD374B86EDA011E3A8A /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		662A5F2B3AFF1CC4F87C0365 /* Pods_OneAtOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3453F8793C765E4443A2AAC /* Pods_OneAtOneTests.framework */; };
 		BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D03391E10798600EB99BF /* YoutubeUtils.swift */; };
+		BA6D30881E1D5C7A00E77A96 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA6D30871E1D5C7A00E77A96 /* fontawesome-webfont.ttf */; };
+		BA6D308A1E1D5FE000E77A96 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D30891E1D5FE000E77A96 /* FontExtensions.swift */; };
+		BA6D308C1E1D617400E77A96 /* UIButton+icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D308B1E1D617400E77A96 /* UIButton+icon.swift */; };
 		BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */; };
 		BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */; };
 		BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */; };
@@ -38,6 +41,9 @@
 		6E7F9487CE2B6828B78CD971 /* Pods-OneAtOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOne/Pods-OneAtOne.debug.xcconfig"; sourceTree = "<group>"; };
 		7D5A78BB46DE94EE97EC14F6 /* Pods-OneAtOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOne/Pods-OneAtOne.release.xcconfig"; sourceTree = "<group>"; };
 		BA2D03391E10798600EB99BF /* YoutubeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeUtils.swift; sourceTree = "<group>"; };
+		BA6D30871E1D5C7A00E77A96 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		BA6D30891E1D5FE000E77A96 /* FontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
+		BA6D308B1E1D617400E77A96 /* UIButton+icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+icon.swift"; sourceTree = "<group>"; };
 		BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedViewController.swift; sourceTree = "<group>"; };
 		BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E7D486851E1E0118002AB878 /* GoogleService-Info.plist */,
+				BA6D30871E1D5C7A00E77A96 /* fontawesome-webfont.ttf */,
 				E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */,
 				E77B92451E0BBFE600E5A063 /* AppDelegate.swift */,
 				BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */,
@@ -124,6 +131,8 @@
 				E77B92491E0BBFE600E5A063 /* Main.storyboard */,
 				BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */,
 				BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */,
+				BA6D308B1E1D617400E77A96 /* UIButton+icon.swift */,
+				BA6D30891E1D5FE000E77A96 /* FontExtensions.swift */,
 				E77B924C1E0BBFE600E5A063 /* Assets.xcassets */,
 				E77B924E1E0BBFE600E5A063 /* LaunchScreen.storyboard */,
 				E77B92511E0BBFE600E5A063 /* Info.plist */,
@@ -251,6 +260,7 @@
 			files = (
 				E77B92501E0BBFE600E5A063 /* LaunchScreen.storyboard in Resources */,
 				E7D486861E1E0118002AB878 /* GoogleService-Info.plist in Resources */,
+				BA6D30881E1D5C7A00E77A96 /* fontawesome-webfont.ttf in Resources */,
 				E77B924D1E0BBFE600E5A063 /* Assets.xcassets in Resources */,
 				E77B924B1E0BBFE600E5A063 /* Main.storyboard in Resources */,
 			);
@@ -381,6 +391,8 @@
 				E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */,
 				E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */,
 				BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */,
+				BA6D308C1E1D617400E77A96 /* UIButton+icon.swift in Sources */,
+				BA6D308A1E1D5FE000E77A96 /* FontExtensions.swift in Sources */,
 				BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */,
 				E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */,
 			);
