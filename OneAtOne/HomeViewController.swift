@@ -63,4 +63,5 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate 
 		
 		self.present(activityViewController, animated: true, completion: nil)
 	}
+
 }
