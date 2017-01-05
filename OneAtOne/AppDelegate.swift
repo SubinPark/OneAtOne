@@ -22,10 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Twitter.self])
 		FIRApp.configure()
 		
-		let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
-		let notificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
-		application.registerForRemoteNotifications()
-		application.registerUserNotificationSettings(notificationSettings)
+		let _ = RCValues.sharedInstance
+		
+        // Customize the tab bar
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 17),
+             NSForegroundColorAttributeName: UIColor.gray],
+            for: .normal)
+        
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 17),
+             NSForegroundColorAttributeName: UIColor.black],
+            for: .selected)
 
 		return true
 	}
@@ -56,7 +64,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		print("Message ID : \(userInfo["gcm_message_id"]!)")
 		print(userInfo)
 	}
-
-
 }
 
