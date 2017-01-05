@@ -39,6 +39,6 @@ class NotificationsViewController: UIViewController {
         
         // Round corners
         confirmButton.layer.cornerRadius = confirmButton.frame.height/2.0
-       confirmButton.leadTitle(withFontAwesomeIconNamed: "fa-thumbs-up")
+        confirmButton.leadTitle(withFontAwesomeIconNamed: "fa-thumbs-up")
     }
 }
