@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewCountLabel: UILabel!
     @IBOutlet weak var viewCountLoadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var shareButton: UIButton!
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -66,7 +67,11 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
+	
+	@IBAction func shareButtonDidTapped(_ sender: Any) {
+		let activityItems = ["https://www.youtube.com/watch?v=\(YoutubeUtils.videoID)"]
+		let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+		
+		self.present(activityViewController, animated: true, completion: nil)
+	}
 }
-
