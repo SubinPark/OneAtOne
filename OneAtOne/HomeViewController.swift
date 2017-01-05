@@ -12,14 +12,15 @@ import UIKit
 class HomeViewController: UIViewController, NotificationsViewControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var shareButton: UIButton!
 	
-	var notificationsViewController : NotificationsViewController?
-	
+    var notificationsViewController : NotificationsViewController?
+    
+    @IBOutlet weak var shareButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-	}
+        shareButton.leadTitle(withFontAwesomeIconNamed: "fa-share")
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
