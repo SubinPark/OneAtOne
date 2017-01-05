@@ -20,7 +20,7 @@ class RCValues {
  
 	private init() {
 		loadDefaultValues()
-		fetchCloudValues()
+		fetchCloudValues {_ in }
 	}
  
 	func loadDefaultValues() {
@@ -30,7 +30,7 @@ class RCValues {
 		FIRRemoteConfig.remoteConfig().setDefaults(appDefaults)
 	}
 	
-	func fetchCloudValues() {
+	func fetchCloudValues(completionHandler: @escaping (_ videoURL: String) -> Void) {
 		// WARNING: Have to change the duration for production, for example, 43200 (12hr)
 		let fetchDuration: TimeInterval = 10
 		activateDebugMode()
@@ -44,6 +44,7 @@ class RCValues {
 			FIRRemoteConfig.remoteConfig().activateFetched()
 			if let newValue = FIRRemoteConfig.remoteConfig().configValue(forKey: ValueKey.LiveVideoUrl.rawValue).stringValue {
 				self.defaultVideoUrl = newValue
+				completionHandler(self.defaultVideoUrl)
 			}
 		}
 	}
@@ -51,10 +52,5 @@ class RCValues {
 	func activateDebugMode() { // Remove this before releasing to production
 		let debugSettings = FIRRemoteConfigSettings(developerModeEnabled: true)
 		FIRRemoteConfig.remoteConfig().configSettings = debugSettings!
-	}
-	
-	func videoUrl() -> String {
-		fetchCloudValues()
-		return defaultVideoUrl
 	}
 }

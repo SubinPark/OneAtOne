@@ -12,12 +12,14 @@ import UIKit
 class HomeViewController: UIViewController, NotificationsViewControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    var notificationsViewController : NotificationsViewController?
-    
+	@IBOutlet weak var shareButton: UIButton!
+	
+	var notificationsViewController : NotificationsViewController?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
+		
+	}
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -54,7 +56,12 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate 
             notificationsViewController.dismiss(animated: true, completion: nil)
         }
     }
-    
+	
+	@IBAction func shareButtonDidTapped(_ sender: Any) {
+		let activityItems = ["http://appstore.com/oneatone"]
+		let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+		
+		self.present(activityViewController, animated: true, completion: nil)
+	}
+
 }
-
-

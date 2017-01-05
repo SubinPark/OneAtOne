@@ -179,6 +179,9 @@
                                         <state key="normal" title="Share">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Rd-Tp-v5v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,6 +278,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="playerView" destination="Y5w-yQ-enc" id="j8B-52-eiJ"/>
+                        <outlet property="shareButton" destination="FZ9-q7-4df" id="ODX-bL-A0A"/>
                         <outlet property="titleLabel" destination="HHS-H9-JbG" id="BK1-Me-RrK"/>
                         <outlet property="viewCountLabel" destination="Txr-Z3-wul" id="iwv-MH-3js"/>
                         <outlet property="viewCountLoadingIndicator" destination="9jO-wS-NCc" id="r5x-a0-9bC"/>
@@ -387,6 +391,9 @@
                                                         <state key="normal" title="Spread the word">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="shareButtonDidTapped:" destination="9b9-jP-cr0" eventType="touchUpInside" id="cNS-4l-bEr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,6 +600,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="VLf-2p-a3S" id="fuv-AM-N0z"/>
+                        <outlet property="shareButton" destination="NZw-VR-4cR" id="Qxr-Hz-Pis"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrZ-nH-xuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
