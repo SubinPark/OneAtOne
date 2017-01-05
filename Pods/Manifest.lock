@@ -41,6 +41,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - TTTAttributedLabel (2.0.0)
   - TwitterCore (2.7.0):
     - Fabric
   - TwitterKit (2.7.0):
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - Firebase/RemoteConfig
+  - TTTAttributedLabel
   - TwitterKit
   - youtube-ios-player-helper (~> 0.1.4)
 
@@ -67,10 +69,11 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   TwitterCore: fbdbeaf6d2d20cf7c7aa4136fe5173c1c85df2e2
   TwitterKit: 97e729ceea041d174126235bf6ff67dcf37772d4
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: fca5999720c76678fa0655e4e8eaad43ca438c69
+PODFILE CHECKSUM: 01209c1b46336327ce316262d59cbd402fc2b239
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.0.1
