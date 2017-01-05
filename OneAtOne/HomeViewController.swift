@@ -9,12 +9,33 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
-    
+class HomeViewController: UIViewController, NotificationsViewControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    var notificationsViewController : NotificationsViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // if not seen before
+        let hasSeenKey = "hasSeenNotifications"
+        if UserDefaults.standard.object(forKey: hasSeenKey) == nil {
+            if let storyboardName = Bundle.main.object(forInfoDictionaryKey: "UIMainStoryboardFile") as? String {
+                let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "NotificationsViewController")
+                if let notificationsViewController = viewController as? NotificationsViewController {
+                    notificationsViewController.delegate = self
+                    self.notificationsViewController = notificationsViewController
+                    self.present(notificationsViewController, animated: true, completion: nil)
+                    UserDefaults.standard.set(true, forKey: hasSeenKey)
+                }
+            }
+        }
         
         
     }
@@ -28,5 +49,12 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func dismissNotificationsController() {
+        if let notificationsViewController = notificationsViewController {
+            notificationsViewController.dismiss(animated: true, completion: nil)
+        }
+    }
     
 }
+
+

@@ -24,10 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		let _ = RCValues.sharedInstance
 		
-		let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
-		let notificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
-		application.registerForRemoteNotifications()
-		application.registerUserNotificationSettings(notificationSettings)
+        // Customize the tab bar
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 17),
+             NSForegroundColorAttributeName: UIColor.gray],
+            for: .normal)
+        
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 17),
+             NSForegroundColorAttributeName: UIColor.black],
+            for: .selected)
 
 		return true
 	}

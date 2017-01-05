@@ -14,6 +14,7 @@
 		E71A9BF01E1A344400D5BED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */; };
 		E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7541A611E1B12B9008E20C7 /* RCValues.swift */; };
 		BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */; };
+		BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */; };
 		E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92451E0BBFE600E5A063 /* AppDelegate.swift */; };
 		E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92471E0BBFE600E5A063 /* ViewController.swift */; };
 		E77B924B1E0BBFE600E5A063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77B92491E0BBFE600E5A063 /* Main.storyboard */; };
@@ -37,8 +38,9 @@
 		7D5A78BB46DE94EE97EC14F6 /* Pods-OneAtOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOne/Pods-OneAtOne.release.xcconfig"; sourceTree = "<group>"; };
 		BA2D03391E10798600EB99BF /* YoutubeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeUtils.swift; sourceTree = "<group>"; };
 		BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedViewController.swift; sourceTree = "<group>"; };
+		BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		BF600C5FA6E2F55716391D97 /* Pods_OneAtOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2C967D8A1E1B6CDF37A66AD /* Pods_OneAtOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA76EADE0C3727A42CBB29 /* Pods-OneAtOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.release.xcconfig"; sourceTree = "<group>"; };
 		E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneAtOne.entitlements; sourceTree = "<group>"; };
 		E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E77B92471E0BBFE600E5A063 /* ViewController.swift */,
 				BA2D03391E10798600EB99BF /* YoutubeUtils.swift */,
 				E77B92491E0BBFE600E5A063 /* Main.storyboard */,
+				BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */,
 				BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */,
 				E77B924C1E0BBFE600E5A063 /* Assets.xcassets */,
 				E77B924E1E0BBFE600E5A063 /* LaunchScreen.storyboard */,
@@ -376,6 +379,7 @@
 				BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */,
 				E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */,
 				E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */,
+				BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */,
 				BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */,
 				E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */,
 			);
