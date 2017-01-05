@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		03E9D179BF99B190EC2BFEB2 /* Pods_OneAtOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF600C5FA6E2F55716391D97 /* Pods_OneAtOne.framework */; };
 		52977AD374B86EDA011E3A8A /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		662A5F2B3AFF1CC4F87C0365 /* Pods_OneAtOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3453F8793C765E4443A2AAC /* Pods_OneAtOneTests.framework */; };
 		BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D03391E10798600EB99BF /* YoutubeUtils.swift */; };
 		BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */; };
 		BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */; };
 		BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */; };
-		E71A9BF01E1A344400D5BED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */; };
 		E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7541A611E1B12B9008E20C7 /* RCValues.swift */; };
 		E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92451E0BBFE600E5A063 /* AppDelegate.swift */; };
 		E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92471E0BBFE600E5A063 /* ViewController.swift */; };
@@ -21,6 +21,7 @@
 		E77B924D1E0BBFE600E5A063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77B924C1E0BBFE600E5A063 /* Assets.xcassets */; };
 		E77B92501E0BBFE600E5A063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77B924E1E0BBFE600E5A063 /* LaunchScreen.storyboard */; };
 		E77B925B1E0BBFE700E5A063 /* OneAtOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B925A1E0BBFE700E5A063 /* OneAtOneTests.swift */; };
+		E7D486861E1E0118002AB878 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D486851E1E0118002AB878 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		BF600C5FA6E2F55716391D97 /* Pods_OneAtOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA76EADE0C3727A42CBB29 /* Pods-OneAtOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.release.xcconfig"; sourceTree = "<group>"; };
 		E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneAtOne.entitlements; sourceTree = "<group>"; };
-		E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7541A611E1B12B9008E20C7 /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		E77B92421E0BBFE600E5A063 /* OneAtOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneAtOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B92451E0BBFE600E5A063 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +55,9 @@
 		E77B92561E0BBFE700E5A063 /* OneAtOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneAtOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B925A1E0BBFE700E5A063 /* OneAtOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneAtOneTests.swift; sourceTree = "<group>"; };
 		E77B925C1E0BBFE700E5A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D486851E1E0118002AB878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0E8772EA5E68E10878D7518 /* Pods-OneAtOneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3453F8793C765E4443A2AAC /* Pods_OneAtOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52977AD374B86EDA011E3A8A /* (null) in Frameworks */,
+				662A5F2B3AFF1CC4F87C0365 /* Pods_OneAtOneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +115,7 @@
 		E77B92441E0BBFE600E5A063 /* OneAtOne */ = {
 			isa = PBXGroup;
 			children = (
-				E71A9BEF1E1A344400D5BED4 /* GoogleService-Info.plist */,
+				E7D486851E1E0118002AB878 /* GoogleService-Info.plist */,
 				E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */,
 				E77B92451E0BBFE600E5A063 /* AppDelegate.swift */,
 				BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */,
@@ -142,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				BF600C5FA6E2F55716391D97 /* Pods_OneAtOne.framework */,
+				F3453F8793C765E4443A2AAC /* Pods_OneAtOneTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,7 +207,7 @@
 				TargetAttributes = {
 					E77B92411E0BBFE600E5A063 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = S37268DL62;
+						DevelopmentTeam = QREF2WKSTX;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -246,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77B92501E0BBFE600E5A063 /* LaunchScreen.storyboard in Resources */,
-				E71A9BF01E1A344400D5BED4 /* GoogleService-Info.plist in Resources */,
+				E7D486861E1E0118002AB878 /* GoogleService-Info.plist in Resources */,
 				E77B924D1E0BBFE600E5A063 /* Assets.xcassets in Resources */,
 				E77B924B1E0BBFE600E5A063 /* Main.storyboard in Resources */,
 			);
@@ -519,11 +523,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneAtOne/OneAtOne.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S37268DL62;
+				DEVELOPMENT_TEAM = QREF2WKSTX;
 				INFOPLIST_FILE = OneAtOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1at1org.OneAtOne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1at1action.OneAtOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -537,11 +541,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneAtOne/OneAtOne.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S37268DL62;
+				DEVELOPMENT_TEAM = QREF2WKSTX;
 				INFOPLIST_FILE = OneAtOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1at1org.OneAtOne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1at1action.OneAtOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
