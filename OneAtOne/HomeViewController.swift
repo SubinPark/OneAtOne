@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate 
         shareButton.leadTitle(withFontAwesomeIconNamed: "fa-share")
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

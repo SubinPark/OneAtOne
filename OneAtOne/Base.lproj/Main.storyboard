@@ -39,8 +39,13 @@
                                     <constraint firstAttribute="bottom" secondItem="yZF-Iu-6Zn" secondAttribute="bottom" constant="30" id="hZ6-A4-Yhl"/>
                                 </constraints>
                             </view>
+<<<<<<< Updated upstream
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To help you make the most impact, we’d like to send you two kinds of notifications:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
                                 <rect key="frame" x="30" y="267" width="315" height="34"/>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="To help you make the most impact, we’d like to send you two kinds of notifications:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
+                                <rect key="frame" x="25.5" y="173.5" width="269" height="34"/>
+>>>>>>> Stashed changes
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="e1a-Yf-rW0"/>
                                 </constraints>
@@ -98,6 +103,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< Updated upstream
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-Mm-kGT">
+                                <rect key="frame" x="30" y="321" width="315" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109.5" id="GuE-jj-0zP"/>
+                                </constraints>
+                                <string key="text">1. Countdown reminders up to the 1@1 action on Jan. 21.
+
+2. The 1@1 Action Plan after Jan. 21. Each week for a year, you’ll receive a 1-minute video of an easy action to take that, when multiplied by thousands of people, can create real change.</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+>>>>>>> Stashed changes
                         </subviews>
                         <color key="backgroundColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -143,7 +163,11 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg2-I5-n2d" userLabel="Blend to nav bar view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+<<<<<<< Updated upstream
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+=======
+                                <color key="backgroundColor" red="0.035294117647058823" green="0.039215686274509803" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> Stashed changes
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Xlb-ck-mNL"/>
                                 </constraints>
@@ -193,7 +217,11 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1@1 Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-H9-JbG">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="19" y="351" width="338" height="24"/>
+=======
+                                <rect key="frame" x="19" y="351" width="337.5" height="24"/>
+>>>>>>> Stashed changes
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="WBM-dm-Q0d"/>
                                 </constraints>
@@ -202,7 +230,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000 Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-Z3-wul" userLabel="viewCountLabel">
+<<<<<<< Updated upstream
                                 <rect key="frame" x="19" y="380" width="338" height="20"/>
+=======
+                                <rect key="frame" x="19" y="380" width="337.5" height="20"/>
+>>>>>>> Stashed changes
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="pBk-u3-zlS"/>
                                 </constraints>
@@ -234,11 +266,21 @@
                                     <constraint firstAttribute="height" constant="5" id="s9s-in-stK"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback or questions? Email info@1at1.org." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5C-ji-ro3" customClass="TTTAttributedLabel">
+                                <rect key="frame" x="37.5" y="492" width="300" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="27n-GT-p4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Txr-Z3-wul" firstAttribute="bottom" secondItem="9jO-wS-NCc" secondAttribute="bottom" id="1WJ-jY-Phd"/>
                             <constraint firstItem="Hg2-I5-n2d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3PV-um-Ynl"/>
+                            <constraint firstItem="y5C-ji-ro3" firstAttribute="top" secondItem="Ptk-Ar-wDr" secondAttribute="bottom" constant="20" id="47q-po-ArE"/>
                             <constraint firstItem="Ptk-Ar-wDr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7kx-aH-wfQ"/>
                             <constraint firstItem="Txr-Z3-wul" firstAttribute="width" secondItem="HHS-H9-JbG" secondAttribute="width" id="9Rp-c7-qkZ"/>
                             <constraint firstItem="Y5w-yQ-enc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CWZ-S8-yJq"/>
@@ -253,6 +295,7 @@
                             <constraint firstItem="Txr-Z3-wul" firstAttribute="height" secondItem="9jO-wS-NCc" secondAttribute="height" id="PTa-ez-nz1"/>
                             <constraint firstItem="nF0-mm-kLv" firstAttribute="leading" secondItem="UpX-Yd-WZF" secondAttribute="trailing" id="VxR-dc-6eF"/>
                             <constraint firstItem="Txr-Z3-wul" firstAttribute="leading" secondItem="HHS-H9-JbG" secondAttribute="leading" id="XPr-vZ-lWU"/>
+                            <constraint firstItem="y5C-ji-ro3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XR5-ph-lGm"/>
                             <constraint firstItem="HHS-H9-JbG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1t-J9-tEk"/>
                             <constraint firstAttribute="trailing" secondItem="TYv-ld-cag" secondAttribute="trailing" id="c8J-Cu-fSi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="78r-nQ-R7j" secondAttribute="bottom" id="cTi-cI-89W"/>
@@ -277,6 +320,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="feedbackLabel" destination="y5C-ji-ro3" id="TpY-69-cIw"/>
                         <outlet property="playerView" destination="Y5w-yQ-enc" id="j8B-52-eiJ"/>
                         <outlet property="shareButton" destination="FZ9-q7-4df" id="ODX-bL-A0A"/>
                         <outlet property="titleLabel" destination="HHS-H9-JbG" id="BK1-Me-RrK"/>
@@ -364,7 +408,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="383" height="183"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnv-MG-V8d">
+<<<<<<< Updated upstream
                                                         <rect key="frame" x="19.5" y="20" width="345" height="50"/>
+=======
+                                                        <rect key="frame" x="19" y="20" width="345" height="50"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="MEn-gn-pQO"/>
                                                         </constraints>
@@ -375,7 +423,11 @@ Rise for 1 minute of silence</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We rise for our mothers, our sisters, our daughters and ourselves in one unifying action." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZy-on-jpA">
+<<<<<<< Updated upstream
                                                         <rect key="frame" x="19.5" y="80" width="345" height="40"/>
+=======
+                                                        <rect key="frame" x="19" y="80" width="345" height="40"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="LlV-hi-cH0"/>
                                                         </constraints>
@@ -413,10 +465,17 @@ Rise for 1 minute of silence</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-aD-caD" userLabel="Schedule view">
+<<<<<<< Updated upstream
                                                 <rect key="frame" x="0.0" y="193" width="383" height="623"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-KI-32Y">
                                                         <rect key="frame" x="19" y="20" width="345.5" height="25"/>
+=======
+                                                <rect key="frame" x="0.0" y="193" width="383" height="435"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-KI-32Y">
+                                                        <rect key="frame" x="19" y="20" width="345" height="25"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Ijz-L8-KGp"/>
                                                         </constraints>
@@ -434,7 +493,11 @@ Rise for 1 minute of silence</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxf-xb-OxU">
+<<<<<<< Updated upstream
                                                         <rect key="frame" x="19" y="75" width="345.5" height="40"/>
+=======
+                                                        <rect key="frame" x="19" y="75" width="345" height="40"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2Bb-cK-hCk"/>
                                                         </constraints>
@@ -454,7 +517,11 @@ Rise for 1 minute of silence</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXo-1C-PQf">
+<<<<<<< Updated upstream
                                                         <rect key="frame" x="19" y="157" width="345.5" height="80"/>
+=======
+                                                        <rect key="frame" x="19" y="157" width="345" height="80"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="nTS-mj-BVp"/>
                                                         </constraints>
@@ -473,7 +540,11 @@ Rise for 1 minute of silence</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 1@1 COUNTDOWN will begin from the rally stage at Our Nation’s Capital, with Gloria Steinem." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7S-4o-M1A">
+<<<<<<< Updated upstream
                                                         <rect key="frame" x="19" y="279" width="345.5" height="40"/>
+=======
+                                                        <rect key="frame" x="19" y="279" width="345" height="40"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="qhp-dc-kwp"/>
                                                         </constraints>
@@ -490,8 +561,13 @@ Rise for 1 minute of silence</string>
                                                         <color key="textColor" red="0.11764705882352941" green="0.28235294117647058" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+<<<<<<< Updated upstream
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All who believe in equality will stand as able, alone or with others, or will simply be silent for one unifying minute." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-xS-TVH">
                                                         <rect key="frame" x="19" y="361" width="345.5" height="60"/>
+=======
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All who believe in equality will stand as able, alone or with others, or will simply be silent for one unifying minute." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-xS-TVH">
+                                                        <rect key="frame" x="19" y="361" width="345" height="60"/>
+>>>>>>> Stashed changes
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="qay-oQ-qc9"/>
                                                         </constraints>
@@ -499,6 +575,7 @@ Rise for 1 minute of silence</string>
                                                         <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+<<<<<<< Updated upstream
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback or questions? Email info@1at1.org." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za7-1X-03a">
                                                         <rect key="frame" x="41.5" y="630.5" width="300" height="14.5"/>
                                                         <constraints>
@@ -508,6 +585,8 @@ Rise for 1 minute of silence</string>
                                                         <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+=======
+>>>>>>> Stashed changes
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -522,13 +601,11 @@ Rise for 1 minute of silence</string>
                                                     <constraint firstItem="I7S-4o-M1A" firstAttribute="leading" secondItem="Thr-So-woF" secondAttribute="leading" id="M8h-CS-3Z6"/>
                                                     <constraint firstItem="Aca-Si-kja" firstAttribute="top" secondItem="Hxf-xb-OxU" secondAttribute="bottom" constant="22" id="Mqt-x9-zPE"/>
                                                     <constraint firstItem="FXo-1C-PQf" firstAttribute="top" secondItem="Aca-Si-kja" secondAttribute="bottom" id="Obn-qI-8ll"/>
-                                                    <constraint firstAttribute="bottom" secondItem="za7-1X-03a" secondAttribute="bottom" constant="-22" id="WBE-29-e0d"/>
                                                     <constraint firstItem="Mhi-KI-32Y" firstAttribute="width" secondItem="I7S-4o-M1A" secondAttribute="width" id="blX-ne-R7o"/>
                                                     <constraint firstItem="Thr-So-woF" firstAttribute="top" secondItem="Mhi-KI-32Y" secondAttribute="bottom" constant="10" id="csz-Bd-gv8"/>
                                                     <constraint firstAttribute="height" constant="623" id="dRr-mc-6QP"/>
                                                     <constraint firstItem="I7S-4o-M1A" firstAttribute="top" secondItem="QNU-Kg-KsS" secondAttribute="bottom" id="dny-20-gkK"/>
                                                     <constraint firstItem="hPd-GI-hwe" firstAttribute="top" secondItem="I7S-4o-M1A" secondAttribute="bottom" constant="22" id="gXb-Xz-H3H"/>
-                                                    <constraint firstItem="za7-1X-03a" firstAttribute="centerX" secondItem="jxI-aD-caD" secondAttribute="centerX" id="huH-0C-Fgw"/>
                                                     <constraint firstItem="Hxf-xb-OxU" firstAttribute="top" secondItem="Thr-So-woF" secondAttribute="bottom" id="jCq-hh-vYW"/>
                                                     <constraint firstItem="Mhi-KI-32Y" firstAttribute="top" secondItem="jxI-aD-caD" secondAttribute="top" constant="20" id="mll-nK-TlS"/>
                                                     <constraint firstItem="QNU-Kg-KsS" firstAttribute="leading" secondItem="Thr-So-woF" secondAttribute="leading" id="olm-f9-hZA"/>
