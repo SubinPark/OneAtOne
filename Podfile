@@ -13,6 +13,7 @@ target 'OneAtOne' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
+  pod 'TTTAttributedLabel'
 
   target 'OneAtOneTests' do
     inherit! :search_paths
