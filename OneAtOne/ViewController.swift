@@ -8,30 +8,18 @@
 
 import UIKit
 import youtube_ios_player_helper
-import TTTAttributedLabel
 
-class ViewController: UIViewController, TTTAttributedLabelDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var viewCountLabel: UILabel!
     @IBOutlet weak var viewCountLoadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var feedbackLabel: TTTAttributedLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.leadTitle(withFontAwesomeIconNamed: "fa-share")
-        
-        let str : NSString = "Feedback or questions? Email info@1at1.org."
-        feedbackLabel.delegate = self
-        feedbackLabel.text = str as String
-        let range : NSRange = str.range(of: "Email info@1at1.org.")
-        let email = "info@1at1.org"
-        let url = NSURL(string: "mailto:\(email)")
-        if let url = url as? URL {
-            feedbackLabel.addLink(to: url, with: range)
-        }
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -82,10 +70,6 @@ class ViewController: UIViewController, TTTAttributedLabelDelegate {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	
-    public func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
-        UIApplication.shared.openURL(url)
-    }
     
 	@IBAction func shareButtonDidTapped(_ sender: Any) {
 		let activityItems = ["https://www.youtube.com/watch?v=\(RCValues.sharedInstance.defaultVideoUrl)"]
