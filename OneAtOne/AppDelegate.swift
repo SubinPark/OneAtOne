@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 17),
              NSForegroundColorAttributeName: UIColor.black],
             for: .selected)
+        
+        UITabBar.appearance().barTintColor = UIColor.white
 
         UIApplication.shared.statusBarStyle = .lightContent
         
