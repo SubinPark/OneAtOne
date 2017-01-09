@@ -8,18 +8,38 @@
 
 import Foundation
 import UIKit
+import TTTAttributedLabel
 
-class HomeViewController: UIViewController, NotificationsViewControllerDelegate {
+class HomeViewController: UIViewController, NotificationsViewControllerDelegate, TTTAttributedLabelDelegate {
     
+    @IBOutlet weak var shareView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-	
-    var notificationsViewController : NotificationsViewController?
-    
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var websiteLabel: TTTAttributedLabel!
+    @IBOutlet weak var feedbackLabel: TTTAttributedLabel!
+    @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet weak var instagramButton: UIButton!
+    @IBOutlet weak var facebookButton: UIButton!
+    
+    var notificationsViewController : NotificationsViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.leadTitle(withFontAwesomeIconNamed: "fa-share")
+        twitterButton.leadTitle(withFontAwesomeIconNamed: "fa-twitter")
+        instagramButton.leadTitle(withFontAwesomeIconNamed: "fa-instagram")
+        facebookButton.leadTitle(withFontAwesomeIconNamed: "fa-facebook-square")
+        
+        shareView.isUserInteractionEnabled = true
+        
+        let feedbackStr : NSString = "Feedback or questions? Email info@1at1.org."
+        feedbackLabel.delegate = self
+        feedbackLabel.text = feedbackStr as String
+        let range : NSRange = feedbackStr.range(of: "Email info@1at1.org.")
+        let feedbackUrl = NSURL(string: "mailto:info@1at1.org")
+        if let url = feedbackUrl as? URL {
+            feedbackLabel.addLink(to: url, with: range)
+        }
     }
     
     
@@ -45,7 +65,7 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate 
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: 393)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,4 +86,47 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate 
 		self.present(activityViewController, animated: true, completion: nil)
 	}
 
+    @IBAction func socialButtonTapped(_ sender: UIButton) {
+        var nativeURL : NSURL?
+        var webURL : NSURL?
+        switch sender.tag {
+            
+        // Facebook
+        case 1:
+            nativeURL = NSURL(string:"fb://profile/1867705966792928")
+            webURL = NSURL(string: "https://www.facebook.com/oneatone/")
+            break
+            
+        // Instagram
+        case 2:
+            nativeURL = NSURL(string: "instagram://user?username=1at1action")
+            webURL = NSURL(string: "https://www.instagram.com/1at1action/")
+
+            break
+            
+        // Twitter
+        case 3:
+            webURL = NSURL(string: "https://twitter.com/1at1Action")
+            nativeURL = NSURL(string: "twitter://user?screen_name=1at1Action)")
+            break
+            
+        default:
+            // unrecognized button
+            break
+            
+        }
+        
+        if let url = nativeURL as? URL,
+            UIApplication.shared.canOpenURL(url)
+        {
+            UIApplication.shared.openURL(url)
+            
+        } else if let url = webURL as? URL {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    public func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+        UIApplication.shared.openURL(url)
+    }
 }
