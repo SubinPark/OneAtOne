@@ -561,8 +561,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.1at1action.OneAtOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "acfa1559-66c8-44fd-8b02-cec274689aa6";
-				PROVISIONING_PROFILE_SPECIFIER = "1at1 Ad Hoc Distrubution";
+				PROVISIONING_PROFILE = "84e0ef4e-be52-4eb0-b6fa-debda8babf66";
+				PROVISIONING_PROFILE_SPECIFIER = "1at1Action App Store Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
