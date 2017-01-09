@@ -217,7 +217,7 @@
 					E77B92411E0BBFE600E5A063 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = QREF2WKSTX;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -534,13 +534,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneAtOne/OneAtOne.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = QREF2WKSTX;
 				INFOPLIST_FILE = OneAtOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.1at1action.OneAtOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "acfa1559-66c8-44fd-8b02-cec274689aa6";
+				PROVISIONING_PROFILE_SPECIFIER = "1at1 Ad Hoc Distrubution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -552,13 +554,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneAtOne/OneAtOne.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = QREF2WKSTX;
 				INFOPLIST_FILE = OneAtOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.1at1action.OneAtOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "acfa1559-66c8-44fd-8b02-cec274689aa6";
+				PROVISIONING_PROFILE_SPECIFIER = "1at1 Ad Hoc Distrubution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
