@@ -80,7 +80,7 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate,
     }
 	
 	@IBAction func shareButtonDidTapped(_ sender: Any) {
-		let activityItems = ["http://appstore.com/oneatone"]
+		let activityItems = ["http://itunes.apple.com/app/id1192159190"]
 		let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
 		
 		self.present(activityViewController, animated: true, completion: nil)
