@@ -72,7 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-		print("Message ID : \(userInfo["gcm_message_id"]!)")
+        if let gcmMsgID = userInfo["gcm_message_id"] {
+            print("Message ID : \(gcmMsgID)")
+        }
 		print(userInfo)
 	}
 }
