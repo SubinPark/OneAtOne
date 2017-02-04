@@ -25,7 +25,8 @@ class YoutubeUtils : NSObject {
         let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
             do {
                 var viewCount : Int? = nil
-                if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] {
+                if let data = data,
+                    let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] {
                     
                     print("Response from YouTube: \(jsonResult)")
                     
@@ -63,7 +64,8 @@ class YoutubeUtils : NSObject {
         let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
             do {
                 var title : String? = nil
-                if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] {
+                if let data = data,
+                   let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] {
                     
                     print("Response from YouTube: \(jsonResult)")
                     
