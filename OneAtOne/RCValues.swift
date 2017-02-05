@@ -31,8 +31,11 @@ class RCValues {
 	}
 	
 	func fetchCloudValues(completionHandler: @escaping (_ videoURL: String) -> Void) {
-		// WARNING: Have to change the duration for production, for example, 43200 (12hr)
 		let fetchDuration: TimeInterval = 900
+		#if DEBUG
+			activateDebugMode()
+		#endif
+		
 		FIRRemoteConfig.remoteConfig().fetch(withExpirationDuration: fetchDuration) { [unowned self] (status, error) in
 			guard error == nil else {
 				print ("Uh-oh. Got an error fetching remote values \(error)")
@@ -46,5 +49,10 @@ class RCValues {
 				completionHandler(self.defaultVideoUrl)
 			}
 		}
+	}
+	
+	func activateDebugMode() {
+		let debugSettings = FIRRemoteConfigSettings(developerModeEnabled: true)
+		FIRRemoteConfig.remoteConfig().configSettings = debugSettings!
 	}
 }
