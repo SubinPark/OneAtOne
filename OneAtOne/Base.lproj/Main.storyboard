@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -170,13 +170,6 @@
                                             <action selector="shareButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Rd-Tp-v5v"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vja-vY-uUx">
-                                        <rect key="frame" x="23" y="88" width="338" height="50.5"/>
-                                        <string key="text">We are rising up for our sisters, our mothers, our daughters and ourselves in one unifying act to show we are only going forward. We will not go back.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000 Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-Z3-wul" userLabel="viewCountLabel">
                                         <rect key="frame" x="23" y="58" width="338" height="20"/>
                                         <constraints>
@@ -186,19 +179,25 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-rj-0OW">
+                                        <rect key="frame" x="23" y="83" width="338" height="61"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">We are rising up for our sisters, our mothers, our daughters and ourselves in one unifying act to show we are only going forward. We will not go back.</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Txr-Z3-wul" firstAttribute="leading" secondItem="vja-vY-uUx" secondAttribute="leading" id="MOq-d3-9N1"/>
+                                    <constraint firstItem="lsa-rj-0OW" firstAttribute="top" secondItem="Txr-Z3-wul" secondAttribute="bottom" constant="5" id="KfR-3K-hmR"/>
                                     <constraint firstAttribute="trailing" secondItem="FZ9-q7-4df" secondAttribute="trailing" id="P5u-Sr-No0"/>
                                     <constraint firstItem="Txr-Z3-wul" firstAttribute="top" secondItem="Ptk-Ar-wDr" secondAttribute="top" constant="58" id="QFN-w7-rBR"/>
                                     <constraint firstItem="Txr-Z3-wul" firstAttribute="top" secondItem="Ptk-Ar-wDr" secondAttribute="top" constant="58" id="TAs-0G-HDG"/>
                                     <constraint firstItem="FZ9-q7-4df" firstAttribute="leading" secondItem="Ptk-Ar-wDr" secondAttribute="leading" id="XlY-WY-7iU"/>
-                                    <constraint firstItem="FZ9-q7-4df" firstAttribute="top" secondItem="vja-vY-uUx" secondAttribute="bottom" constant="27.5" id="g8W-Lj-8MC"/>
+                                    <constraint firstItem="FZ9-q7-4df" firstAttribute="top" secondItem="lsa-rj-0OW" secondAttribute="bottom" constant="22" id="XoM-Z7-9pB"/>
                                     <constraint firstAttribute="height" constant="210" id="gPf-A9-DDG"/>
-                                    <constraint firstItem="vja-vY-uUx" firstAttribute="top" secondItem="Txr-Z3-wul" secondAttribute="bottom" constant="10" id="gZw-p9-Lle"/>
                                     <constraint firstItem="Txr-Z3-wul" firstAttribute="leading" secondItem="Ptk-Ar-wDr" secondAttribute="leading" constant="23" id="kQI-IR-XNx"/>
-                                    <constraint firstItem="Txr-Z3-wul" firstAttribute="trailing" secondItem="vja-vY-uUx" secondAttribute="trailing" id="phA-uG-KGR"/>
                                     <constraint firstItem="Txr-Z3-wul" firstAttribute="centerX" secondItem="FZ9-q7-4df" secondAttribute="centerX" id="shH-7H-O8P"/>
                                     <constraint firstAttribute="bottom" secondItem="FZ9-q7-4df" secondAttribute="bottom" id="yiY-9D-jTl"/>
                                 </constraints>
@@ -250,6 +249,7 @@
                             <constraint firstItem="Y5w-yQ-enc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="LVv-XT-pDN"/>
                             <constraint firstItem="UpX-Yd-WZF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/3" id="NJF-vP-DZx"/>
                             <constraint firstItem="Ptk-Ar-wDr" firstAttribute="top" secondItem="Y5w-yQ-enc" secondAttribute="bottom" id="OEf-as-gNk"/>
+                            <constraint firstItem="lsa-rj-0OW" firstAttribute="trailing" secondItem="HHS-H9-JbG" secondAttribute="trailing" id="VN4-48-CqH"/>
                             <constraint firstItem="nF0-mm-kLv" firstAttribute="leading" secondItem="UpX-Yd-WZF" secondAttribute="trailing" id="VxR-dc-6eF"/>
                             <constraint firstItem="HHS-H9-JbG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1t-J9-tEk"/>
                             <constraint firstAttribute="trailing" secondItem="TYv-ld-cag" secondAttribute="trailing" id="c8J-Cu-fSi"/>
@@ -257,6 +257,7 @@
                             <constraint firstItem="78r-nQ-R7j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cUi-5T-M5N"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nF0-mm-kLv" secondAttribute="bottom" id="ddB-mW-e36"/>
                             <constraint firstItem="UpX-Yd-WZF" firstAttribute="leading" secondItem="78r-nQ-R7j" secondAttribute="trailing" id="gV8-Ue-3wR"/>
+                            <constraint firstItem="lsa-rj-0OW" firstAttribute="leading" secondItem="HHS-H9-JbG" secondAttribute="leading" id="hrm-DF-2xS"/>
                             <constraint firstItem="Hg2-I5-n2d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="las-gr-ft8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UpX-Yd-WZF" secondAttribute="bottom" id="mls-6j-qs0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ptk-Ar-wDr" secondAttribute="trailing" constant="-20" id="oQA-pL-bI1"/>
@@ -274,6 +275,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="lsa-rj-0OW" id="PnA-5b-4Gt"/>
                         <outlet property="playerView" destination="Y5w-yQ-enc" id="j8B-52-eiJ"/>
                         <outlet property="shareButton" destination="FZ9-q7-4df" id="ODX-bL-A0A"/>
                         <outlet property="titleLabel" destination="HHS-H9-JbG" id="BK1-Me-RrK"/>
