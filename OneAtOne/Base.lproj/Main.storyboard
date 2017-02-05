@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,15 +39,6 @@
                                     <constraint firstAttribute="bottom" secondItem="yZF-Iu-6Zn" secondAttribute="bottom" constant="30" id="hZ6-A4-Yhl"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To help you make the most impact, we’d like to send you two kinds of notifications:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
-                                <rect key="frame" x="30" y="267" width="315" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="e1a-Yf-rW0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sN-XE-4db">
                                 <rect key="frame" x="30" y="569" width="315" height="44"/>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.043137254899999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,16 +76,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-Mm-kGT">
-                                <rect key="frame" x="30" y="321" width="315" height="140"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
+                                <rect key="frame" x="30" y="275" width="315" height="145"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="GuE-jj-0zP"/>
+                                    <constraint firstAttribute="height" constant="145" id="e1a-Yf-rW0"/>
                                 </constraints>
-                                <string key="text">1. Countdown reminders up to the 1@1 action on Jan. 21.
-
-2. The 1@1 Action Plan after Jan. 21. Each week for a year, you’ll receive a 1-minute video of an easy action to take that, when multiplied by thousands of people, can create real change.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                <color key="textColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">To help you make the most impact, we’d like to send you notifications with actions you can take that, when multiplied by many, can create real change for women and girls.</string>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -102,25 +91,21 @@
                         <constraints>
                             <constraint firstItem="5sN-XE-4db" firstAttribute="width" secondItem="wWL-ta-jfR" secondAttribute="width" id="7l9-Cf-IDg"/>
                             <constraint firstItem="LiA-ly-X4Q" firstAttribute="height" secondItem="sqJ-Qi-o0g" secondAttribute="height" multiplier="0.4" id="9XS-OA-jXv"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="width" secondItem="wWL-ta-jfR" secondAttribute="width" id="Cxf-LI-mRK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LiA-ly-X4Q" secondAttribute="trailing" id="DJe-OC-zWa"/>
                             <constraint firstItem="5sN-XE-4db" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="Drr-7S-tUL"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="width" secondItem="sqJ-Qi-o0g" secondAttribute="width" multiplier="0.84" id="E1I-77-WP7"/>
                             <constraint firstItem="LiA-ly-X4Q" firstAttribute="top" secondItem="sqJ-Qi-o0g" secondAttribute="topMargin" id="JCh-nu-jta"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="L2E-jv-FtV"/>
                             <constraint firstItem="yZF-Iu-6Zn" firstAttribute="width" secondItem="sqJ-Qi-o0g" secondAttribute="width" multiplier="2/3" id="MOT-JL-xMv"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="EJC-IX-0Vo" secondAttribute="bottom" constant="118" id="Moy-FX-DrX"/>
                             <constraint firstItem="JMQ-Pb-SBJ" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="Ocm-B9-IFp"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="SlV-H9-lRd"/>
-                            <constraint firstItem="jrE-Mm-kGT" firstAttribute="top" secondItem="wWL-ta-jfR" secondAttribute="bottom" priority="999" constant="20" id="bMO-jL-kXw"/>
                             <constraint firstItem="wWL-ta-jfR" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="bgN-QJ-k5R"/>
-                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" relation="lessThanOrEqual" secondItem="yZF-Iu-6Zn" secondAttribute="bottom" constant="30" id="bpe-tf-4IK"/>
-                            <constraint firstItem="5sN-XE-4db" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jrE-Mm-kGT" secondAttribute="bottom" constant="45" id="c5O-R0-kiR"/>
+                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" relation="lessThanOrEqual" secondItem="yZF-Iu-6Zn" secondAttribute="bottom" constant="38" id="bpe-tf-4IK"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="5sN-XE-4db" secondAttribute="bottom" constant="54" id="dg5-he-TEp"/>
                             <constraint firstItem="0uE-9Z-Gy7" firstAttribute="top" secondItem="JMQ-Pb-SBJ" secondAttribute="bottom" constant="17" id="h5u-BM-tzo"/>
                             <constraint firstItem="LiA-ly-X4Q" firstAttribute="leading" secondItem="sqJ-Qi-o0g" secondAttribute="leadingMargin" id="lcl-Ax-vlK"/>
                             <constraint firstItem="EJC-IX-0Vo" firstAttribute="centerX" secondItem="sqJ-Qi-o0g" secondAttribute="centerX" id="rbE-87-bWD"/>
-                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" secondItem="LiA-ly-X4Q" secondAttribute="bottom" priority="999" id="z6R-X8-fjz"/>
+                            <constraint firstItem="wWL-ta-jfR" firstAttribute="top" secondItem="LiA-ly-X4Q" secondAttribute="bottom" priority="999" constant="8" id="z6R-X8-fjz"/>
                         </constraints>
                     </view>
                     <connections>
