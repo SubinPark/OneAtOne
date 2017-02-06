@@ -81,7 +81,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="e1a-Yf-rW0"/>
                                 </constraints>
-                                <string key="text">To help you make the most impact, we’d like to send you notifications with actions you can take that, when multiplied by many, can create real change for women and girls.</string>
+                                <string key="text">To help you make the most impact, we’d like to send you notifications with actions you can take that when multiplied by many, can create real change for women and girls.</string>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -390,7 +390,7 @@ for the advancement of women’s equality.           </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQa-N5-qAe" userLabel="Share View">
                                                 <rect key="frame" x="0.0" y="174" width="383" height="189"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out 1@1.org for more information." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-fP-gOn" customClass="TTTAttributedLabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out 1at1.org for more information." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-fP-gOn" customClass="TTTAttributedLabel">
                                                         <rect key="frame" x="20" y="129" width="344.5" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="WYl-iq-5lv"/>
@@ -459,6 +459,13 @@ for the advancement of women’s equality.           </string>
                                                         <color key="textColor" red="0.89411764709999997" green="0.043137254899999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDm-Ex-geG">
+                                                        <rect key="frame" x="86" y="129" width="56" height="20"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="hjn-dT-wiW"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -477,7 +484,10 @@ for the advancement of women’s equality.           </string>
                                                     <constraint firstItem="MXe-fP-gOn" firstAttribute="width" secondItem="pNd-Vs-4ht" secondAttribute="width" constant="131.5" id="NWJ-CS-5yV"/>
                                                     <constraint firstItem="rl2-zn-dfA" firstAttribute="centerX" secondItem="WQa-N5-qAe" secondAttribute="centerX" id="QGO-fi-LcY"/>
                                                     <constraint firstItem="rl2-zn-dfA" firstAttribute="width" secondItem="WQa-N5-qAe" secondAttribute="width" multiplier="1/3" id="UpC-wH-yMI"/>
+                                                    <constraint firstItem="zDm-Ex-geG" firstAttribute="bottom" secondItem="MXe-fP-gOn" secondAttribute="bottom" id="VAS-Ka-eVH"/>
+                                                    <constraint firstItem="MXe-fP-gOn" firstAttribute="leading" secondItem="zDm-Ex-geG" secondAttribute="trailing" constant="-122" id="VKw-gY-tEj"/>
                                                     <constraint firstItem="xwY-9V-hpN" firstAttribute="top" secondItem="pNd-Vs-4ht" secondAttribute="bottom" constant="8" id="Wjt-mX-nEC"/>
+                                                    <constraint firstItem="zDm-Ex-geG" firstAttribute="top" secondItem="MXe-fP-gOn" secondAttribute="top" id="dgr-Gz-cv0"/>
                                                     <constraint firstAttribute="bottom" secondItem="bUh-oP-D23" secondAttribute="bottom" constant="20" id="fTp-JG-4wV"/>
                                                     <constraint firstItem="Wm6-i8-tiC" firstAttribute="top" secondItem="pNd-Vs-4ht" secondAttribute="bottom" constant="8" id="fkb-gt-HPi"/>
                                                     <constraint firstItem="bUh-oP-D23" firstAttribute="centerX" secondItem="WQa-N5-qAe" secondAttribute="centerX" id="g2c-lV-GtN"/>
@@ -564,6 +574,7 @@ for the advancement of women’s equality.           </string>
                         <outlet property="shareView" destination="WQa-N5-qAe" id="rlN-pm-xbW"/>
                         <outlet property="twitterButton" destination="Wm6-i8-tiC" id="no5-UD-yCf"/>
                         <outlet property="websiteLabel" destination="MXe-fP-gOn" id="QVK-xE-jf5"/>
+                        <outlet property="websiteLinkOverlayView" destination="zDm-Ex-geG" id="IyJ-hT-jHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrZ-nH-xuO" userLabel="First Responder" sceneMemberID="firstResponder"/>

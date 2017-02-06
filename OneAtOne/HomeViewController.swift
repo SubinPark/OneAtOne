@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate,
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var websiteLinkOverlayView: UIView!
     
     var notificationsViewController : NotificationsViewController?
     
@@ -35,11 +36,22 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate,
         let feedbackStr : NSString = "Feedback or questions? Email info@1at1.org."
         feedbackLabel.delegate = self
         feedbackLabel.text = feedbackStr as String
-        let range : NSRange = feedbackStr.range(of: "Email info@1at1.org.")
+        let emailRange : NSRange = feedbackStr.range(of: "info@1at1.org")
         let feedbackUrl = NSURL(string: "mailto:info@1at1.org")
-        if let url = feedbackUrl as? URL {
-            feedbackLabel.addLink(to: url, with: range)
+        if let feedbackUrl = feedbackUrl as? URL {
+            feedbackLabel.addLink(to: feedbackUrl, with: emailRange)
         }
+        
+        let websiteStr : NSString = "Check out 1at1.org for more information."
+        let websiteRange : NSRange = websiteStr.range(of: "1at1.org")
+        let websiteUrl = NSURL(string: "https://www.1at1.org")
+        if let websiteUrl = websiteUrl as? URL {
+            websiteLabel.addLink(to: websiteUrl, with: websiteRange)
+        }
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.websiteOverlayTapped(_:)))
+        self.websiteLinkOverlayView.addGestureRecognizer(singleTap)
+        singleTap.cancelsTouchesInView = false
     }
     
     
@@ -85,6 +97,14 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate,
 		
 		self.present(activityViewController, animated: true, completion: nil)
 	}
+    
+    @IBAction func websiteOverlayTapped(_ sender: UIButton) {
+        let websiteUrl = NSURL(string: "https://www.1at1.org")
+        if let websiteUrl = websiteUrl as? URL {
+            UIApplication.shared.openURL(websiteUrl)
+        }
+        
+    }
 
     @IBAction func socialButtonTapped(_ sender: UIButton) {
         var nativeURL : NSURL?
