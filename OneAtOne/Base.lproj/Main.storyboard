@@ -203,16 +203,21 @@
                                             <color key="textColor" red="0.89411764709999997" green="0.043137254899999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9jO-wS-NCc">
+                                            <rect key="frame" x="23" y="58" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="rzj-j6-SBp" firstAttribute="centerX" secondItem="8FW-Gy-AGT" secondAttribute="centerX" id="1Jn-v7-rrC"/>
+                                        <constraint firstItem="9jO-wS-NCc" firstAttribute="leading" secondItem="rzj-j6-SBp" secondAttribute="leading" id="1hN-UT-7vd"/>
                                         <constraint firstAttribute="trailing" secondItem="8FW-Gy-AGT" secondAttribute="trailing" id="4zR-lq-feD"/>
                                         <constraint firstAttribute="height" constant="210" id="6MI-fz-12N"/>
                                         <constraint firstAttribute="bottom" secondItem="8FW-Gy-AGT" secondAttribute="bottom" id="8Me-TB-WB5"/>
                                         <constraint firstItem="rzj-j6-SBp" firstAttribute="leading" secondItem="AZK-ZK-egI" secondAttribute="leading" constant="23" id="Acv-tH-tR3"/>
                                         <constraint firstItem="vhI-BM-MCf" firstAttribute="centerX" secondItem="AZK-ZK-egI" secondAttribute="centerX" id="Do4-gH-mQ9"/>
                                         <constraint firstItem="vhI-BM-MCf" firstAttribute="width" secondItem="nld-Cs-Tgs" secondAttribute="width" id="K4J-1m-Bmc"/>
+                                        <constraint firstItem="9jO-wS-NCc" firstAttribute="centerY" secondItem="rzj-j6-SBp" secondAttribute="centerY" id="KV8-ZG-hQK"/>
                                         <constraint firstItem="8FW-Gy-AGT" firstAttribute="top" secondItem="vhI-BM-MCf" secondAttribute="bottom" constant="22" id="VqJ-mg-kks"/>
                                         <constraint firstItem="8FW-Gy-AGT" firstAttribute="leading" secondItem="AZK-ZK-egI" secondAttribute="leading" id="aGt-sN-QLq"/>
                                         <constraint firstItem="nld-Cs-Tgs" firstAttribute="centerX" secondItem="AZK-ZK-egI" secondAttribute="centerX" id="enk-Nj-nap"/>
@@ -228,7 +233,7 @@
                                         <rect key="frame" x="0.0" y="238" width="375" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xfZ-NR-qCq" id="reZ-Le-h7W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="31.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE ACTIONS TO TAKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-hC-SPn">
@@ -264,7 +269,7 @@
                                         <rect key="frame" x="0.0" y="270" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JzV-b7-W2h" id="iM7-GT-U4k">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12P-HS-A8G">
@@ -322,10 +327,6 @@
                                     <constraint firstAttribute="height" constant="5" id="s9s-in-stK"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9jO-wS-NCc">
-                                <rect key="frame" x="19" y="378" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
