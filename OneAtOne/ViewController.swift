@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var descriptionTextView: UITextView!
+	
+	var completed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +81,18 @@ class ViewController: UIViewController {
 	}
     
 	@IBAction func shareButtonDidTapped(_ sender: Any) {
-		if let button = sender as? UIButton {
-			button.backgroundColor = UIColor.OneAtOneGreen
-			button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "Thanks for making an impact!")
+		if completed {
+			if let button = sender as? UIButton {
+				button.backgroundColor = UIColor.OneAtOneDarkNavy
+				button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "I completed this action")
+				completed = false
+			}
+		} else {
+			if let button = sender as? UIButton {
+				button.backgroundColor = UIColor.OneAtOneGreen
+				button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "Thanks for making an impact!")
+				completed = true
+			}
 		}
 	}
 }

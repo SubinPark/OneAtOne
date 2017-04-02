@@ -114,7 +114,7 @@ class HomeViewController: UIViewController, NotificationsViewControllerDelegate,
         // Facebook
         case 1:
             nativeURL = NSURL(string:"fb://profile/1867705966792928")
-            webURL = NSURL(string: "https://www.facebook.com/1at1action/")
+            webURL = NSURL(string: "https://www.facebook.com/1867705966792928")
             break
             
         // Instagram
