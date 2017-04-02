@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="-1055.2" y="448.42578710644682"/>
         </scene>
-        <!--WATCH-->
+        <!--ACTIONS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OneAtOne" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,14 +156,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-Ar-wDr" userLabel="Description Background View">
                                 <rect key="frame" x="-4" y="331" width="383" height="210"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ9-q7-4df">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ9-q7-4df">
                                         <rect key="frame" x="0.0" y="166" width="383" height="44"/>
                                         <color key="backgroundColor" red="0.031372549019607843" green="0.074509803921568626" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="dqd-vu-sYb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Share">
+                                        <state key="normal" title="I completed this action">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -270,7 +270,7 @@
                             <constraint firstItem="HHS-H9-JbG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="zj9-SG-Rt3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WATCH" id="62I-eH-E5J">
+                    <tabBarItem key="tabBarItem" title="ACTIONS" id="62I-eH-E5J">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

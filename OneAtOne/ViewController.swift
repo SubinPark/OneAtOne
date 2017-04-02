@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shareButton.leadTitle(withFontAwesomeIconNamed: "fa-share")
+        shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check")
         // Start description text view at top of text ins
         descriptionTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
@@ -79,9 +79,9 @@ class ViewController: UIViewController {
 	}
     
 	@IBAction func shareButtonDidTapped(_ sender: Any) {
-		let activityItems = ["https://www.youtube.com/watch?v=\(RCValues.sharedInstance.defaultVideoUrl)"]
-		let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-		
-		self.present(activityViewController, animated: true, completion: nil)
+		if let button = sender as? UIButton {
+			button.backgroundColor = UIColor.OneAtOneGreen
+			button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "Thanks for making an impact!")
+		}
 	}
 }
