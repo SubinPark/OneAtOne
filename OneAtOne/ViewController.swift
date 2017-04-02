@@ -113,46 +113,57 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         viewCountLabel.isHidden = true
         viewCountLoadingIndicator.startAnimating()
         if let id = playlistItem.id {
-        YoutubeUtils.getVideoInformation(for: id) { (error, info : (viewCount: Int?, title: String?, description: String?)?) in
-            DispatchQueue.main.async {
+            if let viewCount = playlistItem.viewCount,
+                let description = playlistItem.description,
+                let title = playlistItem.title {
+                self.titleLabel.text = title
+                self.descriptionTextView.text = description
+                self.descriptionTextView.flashScrollIndicators()
+                let formatted = NumberFormatter().string(from: NSNumber(value: viewCount))
+                self.viewCountLabel.text = "\(formatted) views"
+            } else {
+                YoutubeUtils.getVideoInformation(for: id) { (error, info : (viewCount: Int?, title: String?, description: String?)?) in
+                    DispatchQueue.main.async {
+                        self.viewCountLoadingIndicator.stopAnimating()
+                        self.viewCountLoadingIndicator.isHidden = true
+                        
+                        if let error = error {
+                            print("Error getting view count: \(error)")
+                        }
+                        if let info = info {
+                            if let viewCount = info.viewCount {
+                                
+                                // Format the view count
+                                let numberFormatter = NumberFormatter()
+                                numberFormatter.numberStyle = NumberFormatter.Style.decimal
+                                
+                                if let formattedViewCount = numberFormatter.string(from: NSNumber(value: viewCount)) {
+                                    self.viewCountLabel.text = "\(formattedViewCount) views"
+                                    self.viewCountLabel.isHidden = false
+                                }
+                            }
+                            if let title = info.title {
+                                self.titleLabel.text = title
+                            }
+                            if let description = info.description {
+                                self.descriptionTextView.text = description
+                                self.descriptionTextView.flashScrollIndicators()
+                            }
+                        }
+                        self.playerView.load(withVideoId: id)
+                    }
+                    
+                }
+            }
+            } else {
                 self.viewCountLoadingIndicator.stopAnimating()
                 self.viewCountLoadingIndicator.isHidden = true
-                
-                if let error = error {
-                    print("Error getting view count: \(error)")
-                }
-                if let info = info {
-                    if let viewCount = info.viewCount {
-                        
-                        // Format the view count
-                        let numberFormatter = NumberFormatter()
-                        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-                        
-                        if let formattedViewCount = numberFormatter.string(from: NSNumber(value: viewCount)) {
-                            self.viewCountLabel.text = "\(formattedViewCount) views"
-                            self.viewCountLabel.isHidden = false
-                        }
-                    }
-                    if let title = info.title {
-                        self.titleLabel.text = title
-                    }
-                    if let description = info.description {
-                        self.descriptionTextView.text = description
-                        self.descriptionTextView.flashScrollIndicators()
-                    }
-                }
-                self.playerView.load(withVideoId: id)
             }
         }
-        } else {
-            self.viewCountLoadingIndicator.stopAnimating()
-            self.viewCountLoadingIndicator.isHidden = true
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return playlist.count
         }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playlist.count
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70.0
