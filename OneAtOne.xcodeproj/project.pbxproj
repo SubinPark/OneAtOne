@@ -26,6 +26,8 @@
 		E77B924D1E0BBFE600E5A063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77B924C1E0BBFE600E5A063 /* Assets.xcassets */; };
 		E77B92501E0BBFE600E5A063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77B924E1E0BBFE600E5A063 /* LaunchScreen.storyboard */; };
 		E77B925B1E0BBFE700E5A063 /* OneAtOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B925A1E0BBFE700E5A063 /* OneAtOneTests.swift */; };
+		E783E6AE1E918A2D00BE4082 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783E6AD1E918A2D00BE4082 /* UIImage.swift */; };
+		E783E6B01E918D8B00BE4082 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783E6AF1E918D8B00BE4082 /* Constants.swift */; };
 		E7D486861E1E0118002AB878 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D486851E1E0118002AB878 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		E77B92561E0BBFE700E5A063 /* OneAtOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneAtOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77B925A1E0BBFE700E5A063 /* OneAtOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneAtOneTests.swift; sourceTree = "<group>"; };
 		E77B925C1E0BBFE700E5A063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E783E6AD1E918A2D00BE4082 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		E783E6AF1E918D8B00BE4082 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7D486851E1E0118002AB878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0E8772EA5E68E10878D7518 /* Pods-OneAtOneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3453F8793C765E4443A2AAC /* Pods_OneAtOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +147,8 @@
 				E7541A611E1B12B9008E20C7 /* RCValues.swift */,
 				E7307AF01E905636005189BA /* UIColor.swift */,
 				BA7D1F8C1E90FB8A0066200C /* PlaylistCell.swift */,
+				E783E6AD1E918A2D00BE4082 /* UIImage.swift */,
+				E783E6AF1E918D8B00BE4082 /* Constants.swift */,
 			);
 			path = OneAtOne;
 			sourceTree = "<group>";
@@ -399,8 +405,10 @@
 				BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */,
 				BA7D1F8D1E90FB8A0066200C /* PlaylistCell.swift in Sources */,
 				BA6D308C1E1D617400E77A96 /* UIButton+icon.swift in Sources */,
+				E783E6B01E918D8B00BE4082 /* Constants.swift in Sources */,
 				BA6D308A1E1D5FE000E77A96 /* FontExtensions.swift in Sources */,
 				BA2D033A1E10798600EB99BF /* YoutubeUtils.swift in Sources */,
+				E783E6AE1E918A2D00BE4082 /* UIImage.swift in Sources */,
 				E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */,
 				E7307AF11E905636005189BA /* UIColor.swift in Sources */,
 			);

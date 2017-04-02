@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var playlist = [PlaylistItem]()
-	var completed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +33,8 @@ class ViewController: UIViewController {
             }
         }
         
-        shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check")
+        actionButtonSetup()
+		
         // Start description text view at top of text ins
         descriptionTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
 			self.playerView.load(withVideoId: videoUrl)
 		}
 	}
-    
+	
     /// Reset UITextView to the top of the text instead of the middle.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -91,21 +91,17 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
+	func actionButtonSetup() {
+		shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: Constants.Video.actionComplete, forState: .normal)
+		shareButton.setBackgroundImage(UIImage.from(color: UIColor.OneAtOneDarkNavy), for: .normal)
+		
+		shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: Constants.Video.actionThanks, forState: .selected)
+		shareButton.setBackgroundImage(UIImage.from(color: UIColor.OneAtOneGreen), for: .selected)
+	}
     
 	@IBAction func shareButtonDidTapped(_ sender: Any) {
-		if completed {
-			if let button = sender as? UIButton {
-				button.backgroundColor = UIColor.OneAtOneDarkNavy
-				button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "I completed this action")
-				completed = false
-			}
-		} else {
-			if let button = sender as? UIButton {
-				button.backgroundColor = UIColor.OneAtOneGreen
-				button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "Thanks for making an impact!")
-				completed = true
-			}
-		}
+		shareButton.isSelected = !shareButton.isSelected
 	}
 }
 
@@ -115,6 +111,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return tableView.dequeueReusableCell(withIdentifier: "SectionHeader")
     }
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return CGFloat.init(32)
+	}
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let playlistItem = playlist[indexPath.row]
@@ -179,6 +179,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             if let image = playlistItem.thumbnail {
                 cell.thumbnail.image = image
             }
+			
+			cell.videoID = playlistItem.id
+			cell.delegate = self
             return cell
         } else {
             print("Unknown cell type")

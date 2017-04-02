@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -264,6 +264,7 @@
                                                 <constraint firstItem="JxW-hC-SPn" firstAttribute="centerY" secondItem="reZ-Le-h7W" secondAttribute="centerY" id="uc9-WN-FRQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="270" width="375" height="70"/>
@@ -280,21 +281,35 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-gT-PBp">
-                                                    <rect key="frame" x="122" y="26.5" width="235" height="17"/>
+                                                    <rect key="frame" x="122" y="27" width="200" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APB-C8-Epi">
+                                                    <rect key="frame" x="332" y="22" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="UI8-vA-wRz"/>
+                                                        <constraint firstAttribute="height" constant="25" id="dCo-6m-EKa"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="uncheck"/>
+                                                    <connections>
+                                                        <action selector="checkButtonDidTapped:" destination="JzV-b7-W2h" eventType="touchUpInside" id="1k9-Rb-62C"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="leading" secondItem="aTE-gT-PBp" secondAttribute="trailing" constant="10" id="3kU-iO-i2F"/>
                                                 <constraint firstItem="aTE-gT-PBp" firstAttribute="leading" secondItem="12P-HS-A8G" secondAttribute="trailing" constant="12" id="Gly-5P-h4C"/>
                                                 <constraint firstItem="12P-HS-A8G" firstAttribute="leading" secondItem="iM7-GT-U4k" secondAttribute="leading" constant="20" id="Q3z-b8-yqH"/>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="top" secondItem="iM7-GT-U4k" secondAttribute="topMargin" constant="14" id="U5f-Pv-2hk"/>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="trailing" secondItem="iM7-GT-U4k" secondAttribute="trailingMargin" constant="-10" id="Xqs-TK-cy8"/>
                                                 <constraint firstItem="12P-HS-A8G" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" id="aUw-9e-zka"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="aTE-gT-PBp" secondAttribute="trailing" constant="10" id="dlE-Da-MxZ"/>
-                                                <constraint firstItem="aTE-gT-PBp" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" id="g7m-SB-FPH"/>
+                                                <constraint firstItem="aTE-gT-PBp" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" constant="1" id="g7m-SB-FPH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkButton" destination="APB-C8-Epi" id="M3N-gu-84s"/>
                                             <outlet property="imageView" destination="12P-HS-A8G" id="kWL-Vj-Bqw"/>
                                             <outlet property="thumbnail" destination="12P-HS-A8G" id="CEJ-my-bep"/>
                                             <outlet property="title" destination="aTE-gT-PBp" id="poY-jY-dXI"/>
@@ -359,8 +374,12 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="vhI-BM-MCf" id="8DV-6L-FgQ"/>
                         <outlet property="playerView" destination="Y5w-yQ-enc" id="j8B-52-eiJ"/>
+                        <outlet property="shareButton" destination="8FW-Gy-AGT" id="tGJ-g7-0m9"/>
                         <outlet property="tableView" destination="NQ0-Yb-lGT" id="Bs4-XZ-ffB"/>
+                        <outlet property="titleLabel" destination="nld-Cs-Tgs" id="hbA-jE-l0m"/>
+                        <outlet property="viewCountLabel" destination="rzj-j6-SBp" id="qeI-Ay-nUl"/>
                         <outlet property="viewCountLoadingIndicator" destination="9jO-wS-NCc" id="r5x-a0-9bC"/>
                     </connections>
                 </viewController>
@@ -931,5 +950,6 @@ for the advancement of women’s equality.           </string>
     <resources>
         <image name="logoView" width="375" height="180"/>
         <image name="mobilize" width="267" height="162"/>
+        <image name="uncheck" width="25" height="25"/>
     </resources>
 </document>
