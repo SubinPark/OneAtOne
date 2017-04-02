@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 struct PlaylistItem {
+    var id : String?
     var title : String?
     var description : String?
     var thumbnailUrl : String?
+    var thumbnail : UIImage?
 }
 
 class YoutubeUtils : NSObject {
@@ -99,7 +101,30 @@ class YoutubeUtils : NSObject {
     }
     
     static func fetchPlaylistData(_ completionHandler : @escaping ([PlaylistItem]?) -> Swift.Void) {
-        PlaylistFetcher.sharedInstance.fetchPlaylistData(playlistID, completionHandler: completionHandler)
+        PlaylistFetcher.sharedInstance.fetchPlaylistData(playlistID) { (playlist) in
+            if var playlist = playlist {
+                let dispatchGroup = DispatchGroup()
+                for i in 0..<playlist.count {
+                    var item = playlist[i]
+                    dispatchGroup.enter()
+                    if let url = item.thumbnailUrl {
+                        YoutubeUtils.downloadImage(url, completionHandler: { (image) in
+                            item.thumbnail = image
+                            playlist[i] = item
+                            dispatchGroup.leave()
+                        })
+                    } else {
+                        dispatchGroup.leave()
+                    }
+                }
+                dispatchGroup.notify(queue: DispatchQueue.main) {
+                    
+                    completionHandler(playlist)
+                }
+            } else {
+                completionHandler(playlist)
+            }
+        }
     }
     
 }
@@ -141,6 +166,10 @@ fileprivate class PlaylistFetcher {
                     if let items = jsonResult["items"] as? [[String : Any]] {
                         for item in items {
                             var playlistItem = PlaylistItem()
+                            if let contentDetails = item["contentDetails"] as? [String : Any],
+                                let videoId = contentDetails["videoId"] as? String {
+                                playlistItem.id = videoId
+                            }
                             if let snippet = item["snippet"] as? [String : Any]{
                                 if let title = snippet["title"] as? String {
                                     playlistItem.title = title
@@ -149,7 +178,7 @@ fileprivate class PlaylistFetcher {
                                     playlistItem.description = description
                                 }
                                 if let thumbnails = snippet["thumbnails"] as? [String : Any],
-                                    let defaultInfo = thumbnails["default"] as? [String : Any],
+                                    let defaultInfo = thumbnails["medium"] as? [String : Any],
                                     let url = defaultInfo["url"] as? String {
                                     playlistItem.thumbnailUrl = url
                                 }
