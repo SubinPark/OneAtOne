@@ -295,7 +295,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="12P-HS-A8G" id="kWL-Vj-Bqw"/>
                                             <outlet property="thumbnail" destination="12P-HS-A8G" id="CEJ-my-bep"/>
                                             <outlet property="title" destination="aTE-gT-PBp" id="poY-jY-dXI"/>
                                         </connections>
@@ -359,8 +358,12 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="vhI-BM-MCf" id="xt3-x2-eT2"/>
                         <outlet property="playerView" destination="Y5w-yQ-enc" id="j8B-52-eiJ"/>
+                        <outlet property="shareButton" destination="8FW-Gy-AGT" id="Fkm-gi-32j"/>
                         <outlet property="tableView" destination="NQ0-Yb-lGT" id="Bs4-XZ-ffB"/>
+                        <outlet property="titleLabel" destination="nld-Cs-Tgs" id="Mbf-yv-P1L"/>
+                        <outlet property="viewCountLabel" destination="rzj-j6-SBp" id="iGe-xD-jnB"/>
                         <outlet property="viewCountLoadingIndicator" destination="9jO-wS-NCc" id="r5x-a0-9bC"/>
                     </connections>
                 </viewController>

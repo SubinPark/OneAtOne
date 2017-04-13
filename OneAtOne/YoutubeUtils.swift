@@ -10,11 +10,17 @@ import Foundation
 import UIKit
 
 struct PlaylistItem {
+    // populated by fetchPlaylistData
     var id : String?
     var title : String?
-    var description : String?
     var thumbnailUrl : String?
+    
+    // populated by downloadImage
     var thumbnail : UIImage?
+    
+    // populated by getVideoInformation
+    var viewCount : Int?
+    var description : String?
 }
 
 class YoutubeUtils : NSObject {
@@ -23,7 +29,7 @@ class YoutubeUtils : NSObject {
     
     fileprivate static let baseUrl = "https://www.googleapis.com/youtube/v3/"
     
-    fileprivate static let playlistID = "PL63F0C78739B09958"
+    fileprivate static let playlistID = "PLMfNR7VDgPxWO8UaF6JQXZFVajYCeufoW"
     /**
      * Asynchronously gets the view count for a given youtube video ID.
      *
@@ -138,7 +144,9 @@ fileprivate class PlaylistFetcher {
     var playlist = [PlaylistItem]()
     
     func fetchPage(ofPlaylist playlistID: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
-        let apistr = "\(YoutubeUtils.baseUrl)playlistItems?part=snippet&maxResults=50&pageToken=\(token ?? "")&playlistId=\(playlistID)&key=\(YoutubeUtils.apiKey)"
+        var tokenInfo = ""
+        if let token = token { tokenInfo = "pageToken=\(token)" }
+        let apistr = "\(YoutubeUtils.baseUrl)playlistItems?part=snippet&fields=nextPageToken,pageInfo,items(id,snippet(title,thumbnails(medium),resourceId(videoId)))&maxResults=50&playlistId=\(YoutubeUtils.playlistID)&key=\(YoutubeUtils.apiKey)" + tokenInfo
         let url = NSURL(string: apistr)
         if let url_url = url as? URL {
             let task = URLSession.shared.dataTask(with: url_url, completionHandler: { (data, response, error) -> Void in
@@ -166,21 +174,20 @@ fileprivate class PlaylistFetcher {
                     if let items = jsonResult["items"] as? [[String : Any]] {
                         for item in items {
                             var playlistItem = PlaylistItem()
-                            if let contentDetails = item["contentDetails"] as? [String : Any],
-                                let videoId = contentDetails["videoId"] as? String {
-                                playlistItem.id = videoId
-                            }
+                            
                             if let snippet = item["snippet"] as? [String : Any]{
                                 if let title = snippet["title"] as? String {
                                     playlistItem.title = title
-                                }
-                                if let description = snippet["description"] as? String {
-                                    playlistItem.description = description
                                 }
                                 if let thumbnails = snippet["thumbnails"] as? [String : Any],
                                     let defaultInfo = thumbnails["medium"] as? [String : Any],
                                     let url = defaultInfo["url"] as? String {
                                     playlistItem.thumbnailUrl = url
+                                }
+                                if let resource = snippet["resourceId"] as? [String : Any] {
+                                    if let videoId = resource["videoId"] as? String {
+                                        playlistItem.id = videoId
+                                    }
                                 }
                             }
                             self.playlist.append(playlistItem)
