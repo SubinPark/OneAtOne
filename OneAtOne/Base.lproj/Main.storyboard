@@ -266,7 +266,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="270" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JzV-b7-W2h" id="iM7-GT-U4k">
@@ -310,7 +310,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkButton" destination="APB-C8-Epi" id="M3N-gu-84s"/>
-                                            <outlet property="imageView" destination="12P-HS-A8G" id="kWL-Vj-Bqw"/>
                                             <outlet property="thumbnail" destination="12P-HS-A8G" id="CEJ-my-bep"/>
                                             <outlet property="title" destination="aTE-gT-PBp" id="poY-jY-dXI"/>
                                         </connections>

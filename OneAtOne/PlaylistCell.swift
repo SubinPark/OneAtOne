@@ -33,6 +33,9 @@ class PlaylistCell : UITableViewCell {
 	@IBAction func checkButtonDidTapped(_ sender: Any) {
 		if let button = sender as? UIButton {
 			button.isSelected = !button.isSelected
+			if let id = videoID {
+				UserDefaults.standard.set(button.isSelected, forKey: id)
+			}
 		}
 	}
 }

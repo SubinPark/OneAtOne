@@ -114,6 +114,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
 			cell.videoID = playlistItem.id
 			cell.delegate = self
 			
+			if let id = playlistItem.id {
+				cell.checkButton.isSelected = UserDefaults.standard.bool(forKey: id)
+				shareButton.isSelected = cell.checkButton.isSelected
+			}
+			
             return cell
         } else {
             print("Unknown cell type")
