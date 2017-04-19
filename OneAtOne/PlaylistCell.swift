@@ -15,7 +15,7 @@ class PlaylistCell : UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
 	@IBOutlet weak var checkButton: UIButton!
 	
-	var delegate: UITableViewDelegate?
+	var delegate: ViewController?
 	var videoID: String?
 	
 	override func awakeFromNib() {
@@ -33,8 +33,10 @@ class PlaylistCell : UITableViewCell {
 	@IBAction func checkButtonDidTapped(_ sender: Any) {
 		if let button = sender as? UIButton {
 			button.isSelected = !button.isSelected
+			
 			if let id = videoID {
 				UserDefaults.standard.set(button.isSelected, forKey: id)
+				delegate?.updateCompletionNumberAndMainVideoShareButtonWith(videoID: id)
 			}
 		}
 	}

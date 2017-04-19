@@ -18,6 +18,7 @@
 		BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536AF1E17968700E9FC52 /* TwitterFeedViewController.swift */; };
 		BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8536B11E1AF69E00E9FC52 /* HomeViewController.swift */; };
 		BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */; };
+		E703729B1EA7B4C6002AEB7B /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703729A1EA7B4C6002AEB7B /* SectionHeaderCell.swift */; };
 		E7307AF11E905636005189BA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7307AF01E905636005189BA /* UIColor.swift */; };
 		E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7541A611E1B12B9008E20C7 /* RCValues.swift */; };
 		E77B92461E0BBFE600E5A063 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B92451E0BBFE600E5A063 /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		BA88AF091E1CBB8A0032C5E0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		BF600C5FA6E2F55716391D97 /* Pods_OneAtOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneAtOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA76EADE0C3727A42CBB29 /* Pods-OneAtOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneAtOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneAtOneTests/Pods-OneAtOneTests.release.xcconfig"; sourceTree = "<group>"; };
+		E703729A1EA7B4C6002AEB7B /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		E71A9BEE1E1A2F7E00D5BED4 /* OneAtOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneAtOne.entitlements; sourceTree = "<group>"; };
 		E7307AF01E905636005189BA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E7541A611E1B12B9008E20C7 /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				E7541A611E1B12B9008E20C7 /* RCValues.swift */,
 				E7307AF01E905636005189BA /* UIColor.swift */,
 				BA7D1F8C1E90FB8A0066200C /* PlaylistCell.swift */,
+				E703729A1EA7B4C6002AEB7B /* SectionHeaderCell.swift */,
 				E783E6AD1E918A2D00BE4082 /* UIImage.swift */,
 				E783E6AF1E918D8B00BE4082 /* Constants.swift */,
 			);
@@ -400,6 +403,7 @@
 			files = (
 				BA8536B21E1AF69E00E9FC52 /* HomeViewController.swift in Sources */,
 				BA8536B01E17968700E9FC52 /* TwitterFeedViewController.swift in Sources */,
+				E703729B1EA7B4C6002AEB7B /* SectionHeaderCell.swift in Sources */,
 				E7541A621E1B12B9008E20C7 /* RCValues.swift in Sources */,
 				E77B92481E0BBFE600E5A063 /* ViewController.swift in Sources */,
 				BA88AF0A1E1CBB8B0032C5E0 /* NotificationsViewController.swift in Sources */,

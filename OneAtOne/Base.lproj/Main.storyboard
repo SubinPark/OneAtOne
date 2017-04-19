@@ -76,12 +76,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’d like to send you notifications of short weekly videos from effective feminist changemakers." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
                                 <rect key="frame" x="30" y="275" width="315" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="e1a-Yf-rW0"/>
                                 </constraints>
-                                <string key="text">To help you make the most impact, we’d like to send you notifications with actions you can take that when multiplied by many, can create real change for women and girls.</string>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -229,7 +228,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionHeader" rowHeight="32" id="xfZ-NR-qCq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionHeaderCell" rowHeight="32" id="xfZ-NR-qCq" customClass="SectionHeaderCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238" width="375" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xfZ-NR-qCq" id="reZ-Le-h7W">
@@ -247,9 +246,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5 COMPLETED" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-ZP-toG">
-                                                    <rect key="frame" x="261" y="10" width="90" height="12"/>
+                                                    <rect key="frame" x="201" y="10" width="150" height="12"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="4zb-i7-xbd"/>
+                                                        <constraint firstAttribute="width" constant="150" id="4zb-i7-xbd"/>
                                                         <constraint firstAttribute="height" constant="12" id="fZx-yk-exJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
@@ -265,6 +264,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="leftDescriptionLabel" destination="JxW-hC-SPn" id="MDN-8c-9hv"/>
+                                            <outlet property="rightCompletionLabel" destination="h64-ZP-toG" id="N4J-6E-Zbu"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="270" width="375" height="70"/>
