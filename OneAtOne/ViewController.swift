@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var playlist = [PlaylistItem]()
+	var currentItemId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,46 +34,70 @@ class ViewController: UIViewController {
             }
         }
         
-        shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check")
+        actionButtonSetup()
+		
         // Start description text view at top of text ins
         descriptionTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
-    
+	
     override func viewWillAppear(_ animated: Bool) {
         // Kick off a spinner while we fetch view count, this will be hidden by populateMainPlayerView
         viewCountLabel.isHidden = true
         viewCountLoadingIndicator.startAnimating()
         
         RCValues.sharedInstance.fetchCloudValues { (videoUrl) in
+			self.currentItemId = videoUrl
             self.changeMainVideoTo(videoUrl, spinnerStarted: true)
         }
     }
-    
+	
     /// Reset UITextView to the top of the text instead of the middle.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         descriptionTextView.setContentOffset(CGPoint.zero, animated: false)
     }
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
+	func actionButtonSetup() {
+		shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: Constants.Video.actionComplete, forState: .normal)
+		shareButton.setBackgroundImage(UIImage.from(color: UIColor.OneAtOneDarkNavy), for: .normal)
+		
+		shareButton.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: Constants.Video.actionThanks, forState: .selected)
+		shareButton.setBackgroundImage(UIImage.from(color: UIColor.OneAtOneGreen), for: .selected)
+	}
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func shareButtonDidTapped(_ sender: Any) {
-        if let button = sender as? UIButton {
-            button.backgroundColor = UIColor.OneAtOneGreen
-            button.leadTitle(withFontAwesomeIconNamed: "fa-check", titleText: "Thanks for making an impact!")
-        }
-    }
+	@IBAction func shareButtonDidTapped(_ sender: Any) {
+		shareButton.isSelected = !shareButton.isSelected
+		
+		if let index = playlist.index(where: {$0.id == currentItemId}) {
+			UserDefaults.standard.set(shareButton.isSelected, forKey: currentItemId ?? "")
+			playlist[index].completed = shareButton.isSelected
+			tableView.reloadData()
+		}
+	}
 }
 
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableCell(withIdentifier: "SectionHeader")
+		
+		if let cell = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderCell") as? SectionHeaderCell {
+			cell.leftDescriptionLabel.text = "MORE ACTIONS TO TAKE"
+			cell.rightCompletionLabel.text = self.numberOfCompletedActionsText()
+			return cell
+		}
+		
+		return UIView()
     }
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return CGFloat.init(32)
+	}
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let playlistItem = playlist[indexPath.row]
@@ -100,13 +125,46 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             if let image = playlistItem.thumbnail {
                 cell.thumbnail.image = image
             }
-            
+			
+			cell.videoID = playlistItem.id
+			cell.delegate = self
+			
+			if let id = playlistItem.id {
+				cell.checkButton.isSelected = UserDefaults.standard.bool(forKey: id)
+			}
+			
             return cell
-        } else {
+		} else {
             print("Unknown cell type")
             return UITableViewCell()
         }
     }
+	
+	func updateCompletionNumberAndMainVideoShareButtonWith(videoID: String) {
+		let isCompleted = UserDefaults.standard.bool(forKey: videoID)
+		
+		if let index = playlist.index(where: {$0.id == videoID}) {
+			playlist[index].completed = isCompleted
+		}
+		
+		//If the main video is same as the clicked video, update the shareButton
+		if currentItemId == videoID {
+			shareButton.isSelected = isCompleted
+		}
+		
+		tableView.reloadData()
+	}
+	
+	func numberOfCompletedActionsText() -> String {
+		var counter = 0
+		
+		for (_, value) in playlist.enumerated() {
+			if value.completed == true {
+				counter += 1
+			}
+		}
+		return "\(counter)/\(playlist.count) COMPLETED"
+	}
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -132,7 +190,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
                 self.viewCountLoadingIndicator.stopAnimating()
                 self.viewCountLoadingIndicator.isHidden = true
             }
-            self.populatePlayerViewData(viewCount: viewCount, title: title, description: description)
+            self.populatePlayerViewData(viewCount: viewCount, title: title, description: description, completed: UserDefaults.standard.bool(forKey: videoId))
+			
+			currentItemId = playlistItem.id
         } else {
             if !spinnerStarted {
                 viewCountLabel.isHidden = true
@@ -144,7 +204,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
                     self.viewCountLoadingIndicator.isHidden = true
                     
                     guard error == nil else {
-                        print("Error getting video data: \(error)")
+                        print("Error getting video data: \(String(describing: error))")
                         return
                     }
                     
@@ -155,16 +215,18 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
                             playlistItem.description = info.description
                             playlistItem.viewCount = info.viewCount
                             playlistItem.title = info.title
+							playlistItem.completed = UserDefaults.standard.bool(forKey: videoId)
                             self.playlist[index] = playlistItem
+							self.currentItemId = playlistItem.id
                         }
-                        self.populatePlayerViewData(viewCount: info.viewCount, title: info.title, description: info.description)
+                        self.populatePlayerViewData(viewCount: info.viewCount, title: info.title, description: info.description, completed: UserDefaults.standard.bool(forKey: videoId))
                     }
                 }
             }
         }
     }
     
-    fileprivate func populatePlayerViewData(viewCount: Int?, title: String?, description: String?) {
+	fileprivate func populatePlayerViewData(viewCount: Int?, title: String?, description: String?, completed: Bool?) {
         if let viewCount = viewCount {
             // Format the view count
             let numberFormatter = NumberFormatter()
@@ -182,6 +244,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             self.descriptionTextView.text = description
             self.descriptionTextView.flashScrollIndicators()
         }
+		if let completed = completed {
+			self.shareButton.isSelected = completed
+		}
         
     }
 }

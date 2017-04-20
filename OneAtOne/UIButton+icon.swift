@@ -14,19 +14,19 @@ internal extension UIButton {
 	func leadTitle(withFontAwesomeIconNamed name: String) {
 		if let titleText = self.titleLabel?.text {
 			let buttonString = String.fontAwesomeString(name: name) + " " + titleText
-			let buttonStringAttributed = NSMutableAttributedString(string: buttonString, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 13.0)])
+			let buttonStringAttributed = NSMutableAttributedString(string: buttonString, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 13.0), NSForegroundColorAttributeName: UIColor.white])
 			buttonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize(font: "FontAwesome", fontSize: 14), range: NSRange(location: 0,length: 1))
 			
 			self.setAttributedTitle(buttonStringAttributed, for: .normal)
 		}
 	}
 	
-	func leadTitle(withFontAwesomeIconNamed name: String, titleText: String) {
+	func leadTitle(withFontAwesomeIconNamed name: String, titleText: String, forState: UIControlState = .normal) {
 		let buttonString = String.fontAwesomeString(name: name) + " " + titleText
-		let buttonStringAttributed = NSMutableAttributedString(string: buttonString, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 13.0)])
+		let buttonStringAttributed = NSMutableAttributedString(string: buttonString, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 13.0), NSForegroundColorAttributeName: UIColor.white])
 		buttonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize(font: "FontAwesome", fontSize: 14), range: NSRange(location: 0,length: 1))
 		
-		self.setAttributedTitle(buttonStringAttributed, for: .normal)
+		self.setAttributedTitle(buttonStringAttributed, for: forState)
 	}
 	
 }

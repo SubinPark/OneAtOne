@@ -21,6 +21,8 @@ struct PlaylistItem {
     // populated by getVideoInformation
     var viewCount : Int?
     var description : String?
+	
+	var completed : Bool?
 }
 
 class YoutubeUtils : NSObject {
@@ -187,6 +189,7 @@ fileprivate class PlaylistFetcher {
                                 if let resource = snippet["resourceId"] as? [String : Any] {
                                     if let videoId = resource["videoId"] as? String {
                                         playlistItem.id = videoId
+										playlistItem.completed = UserDefaults.standard.bool(forKey: videoId)
                                     }
                                 }
                             }

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jyB-xW-UQk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -76,12 +76,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’d like to send you notifications of short weekly videos from effective feminist changemakers." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-ta-jfR" userLabel="Notifications label">
                                 <rect key="frame" x="30" y="275" width="315" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="e1a-Yf-rW0"/>
                                 </constraints>
-                                <string key="text">To help you make the most impact, we’d like to send you notifications with actions you can take that when multiplied by many, can create real change for women and girls.</string>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -229,11 +228,11 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionHeader" rowHeight="32" id="xfZ-NR-qCq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionHeaderCell" rowHeight="32" id="xfZ-NR-qCq" customClass="SectionHeaderCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238" width="375" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xfZ-NR-qCq" id="reZ-Le-h7W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="31.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE ACTIONS TO TAKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-hC-SPn">
@@ -247,9 +246,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5 COMPLETED" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-ZP-toG">
-                                                    <rect key="frame" x="261" y="10" width="90" height="12"/>
+                                                    <rect key="frame" x="201" y="10" width="150" height="12"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="4zb-i7-xbd"/>
+                                                        <constraint firstAttribute="width" constant="150" id="4zb-i7-xbd"/>
                                                         <constraint firstAttribute="height" constant="12" id="fZx-yk-exJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
@@ -264,12 +263,17 @@
                                                 <constraint firstItem="JxW-hC-SPn" firstAttribute="centerY" secondItem="reZ-Le-h7W" secondAttribute="centerY" id="uc9-WN-FRQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="leftDescriptionLabel" destination="JxW-hC-SPn" id="MDN-8c-9hv"/>
+                                            <outlet property="rightCompletionLabel" destination="h64-ZP-toG" id="N4J-6E-Zbu"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="70" id="JzV-b7-W2h" customClass="PlaylistCell" customModule="OneAtOne" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="270" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JzV-b7-W2h" id="iM7-GT-U4k">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12P-HS-A8G">
@@ -280,21 +284,35 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-gT-PBp">
-                                                    <rect key="frame" x="122" y="26.5" width="235" height="17"/>
+                                                    <rect key="frame" x="122" y="27" width="200" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APB-C8-Epi">
+                                                    <rect key="frame" x="332" y="22" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="UI8-vA-wRz"/>
+                                                        <constraint firstAttribute="height" constant="25" id="dCo-6m-EKa"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="uncheck"/>
+                                                    <connections>
+                                                        <action selector="checkButtonDidTapped:" destination="JzV-b7-W2h" eventType="touchUpInside" id="1k9-Rb-62C"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="leading" secondItem="aTE-gT-PBp" secondAttribute="trailing" constant="10" id="3kU-iO-i2F"/>
                                                 <constraint firstItem="aTE-gT-PBp" firstAttribute="leading" secondItem="12P-HS-A8G" secondAttribute="trailing" constant="12" id="Gly-5P-h4C"/>
                                                 <constraint firstItem="12P-HS-A8G" firstAttribute="leading" secondItem="iM7-GT-U4k" secondAttribute="leading" constant="20" id="Q3z-b8-yqH"/>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="top" secondItem="iM7-GT-U4k" secondAttribute="topMargin" constant="14" id="U5f-Pv-2hk"/>
+                                                <constraint firstItem="APB-C8-Epi" firstAttribute="trailing" secondItem="iM7-GT-U4k" secondAttribute="trailingMargin" constant="-10" id="Xqs-TK-cy8"/>
                                                 <constraint firstItem="12P-HS-A8G" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" id="aUw-9e-zka"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="aTE-gT-PBp" secondAttribute="trailing" constant="10" id="dlE-Da-MxZ"/>
-                                                <constraint firstItem="aTE-gT-PBp" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" id="g7m-SB-FPH"/>
+                                                <constraint firstItem="aTE-gT-PBp" firstAttribute="centerY" secondItem="iM7-GT-U4k" secondAttribute="centerY" constant="1" id="g7m-SB-FPH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkButton" destination="APB-C8-Epi" id="M3N-gu-84s"/>
                                             <outlet property="thumbnail" destination="12P-HS-A8G" id="CEJ-my-bep"/>
                                             <outlet property="title" destination="aTE-gT-PBp" id="poY-jY-dXI"/>
                                         </connections>
@@ -934,5 +952,6 @@ for the advancement of women’s equality.           </string>
     <resources>
         <image name="logoView" width="375" height="180"/>
         <image name="mobilize" width="267" height="162"/>
+        <image name="uncheck" width="25" height="25"/>
     </resources>
 </document>
